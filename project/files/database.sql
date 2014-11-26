@@ -15,7 +15,7 @@ CREATE TABLE User (
 	username VARCHAR2(100) CHECK (username != NULL AND username != ""),
 	registerDate DATE CHECK (registerDate <= date('now')),
 	lastLoginDate DATE CHECK (lastLoginDate <= date('now')),
-	password VARCHAR2(32)
+	password VARCHAR2(255)
 );
 
 DROP TABLE IF EXISTS Poll;
