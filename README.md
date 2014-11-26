@@ -6,7 +6,7 @@ A web application where users can create, share, and manage polls.
 #Requirements
 ##Minimum expected requirements:
 - [x] Users should be able to register an account;
-- [ ] Users should be able to login/logout from the system;
+- [x] Users should be able to login/logout from the system;
 - [ ] Registered users should be able to create a poll;
 - [ ] Registered users should be able to manage their polls;
 - [ ] Polls should contain one image and several possible answers;
