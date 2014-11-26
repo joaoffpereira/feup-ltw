@@ -17,6 +17,11 @@ try {
 
   if ($user !== false /*&& password_verify($password, $user['password'], )*/) {
     $_SESSION['username'] = $username;
+    
+    $stmt = $dbh->prepare('UPDATE User SET lastLoginDate = ? WHERE username = ?');
+    $stmt->execute(array(
+      date('Y-m-d H:i:s'), 
+      $username));
   }
   else die('Invalid Username or Password!');
 

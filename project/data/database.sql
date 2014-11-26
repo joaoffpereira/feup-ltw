@@ -6,8 +6,8 @@ DROP TABLE IF EXISTS User;
 CREATE TABLE User (
 	idUser INTEGER PRIMARY KEY AUTOINCREMENT,
 	username VARCHAR2(100) CHECK (username != NULL AND username != ""),
-	registerDate DATE CHECK (registerDate <= date('now')),
-	lastLoginDate DATE CHECK (lastLoginDate <= date('now')),
+	registerDate DATE,
+	lastLoginDate DATE,
 	password VARCHAR2(255)
 );
 
