@@ -4,7 +4,8 @@ body {
   background-color: #eee;
 }
 
-header {
+header,
+footer {
   text-align: center;
 }
 
@@ -37,6 +38,14 @@ header {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.form-signin .form-dropdown {
+  height: auto;
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 
 .create-account {
