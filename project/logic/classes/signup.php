@@ -4,9 +4,7 @@ include_once("connection.php");
 try {
 	$user = $_POST["inputUsername"];
 	$pass = $_POST["inputPassword"];
-	//$gender = $_POST["inputGender"];
-	$gender = "male";
-
+	$gender = $_POST["inputGender"];
 
 	if (!isset($user)) die('No username');
 	if (!isset($pass)) die('No password');

@@ -39,7 +39,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
 
-        <select class="form-dropdown" name="gender">
+        <select class="form-dropdown" name="inputGender">
           <option value="none" hidden="true">Gender</option>
           <option value="female">Female</option>
           <option value="male">Male</option>
