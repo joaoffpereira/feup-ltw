@@ -10,9 +10,9 @@ try {
 
 	$stmt = $dbh->prepare('INSERT INTO User (username, registerDate, lastLoginDate, password) VALUES (?,?,?,?)');
 	$stmt->execute(array(
-		$user, 
-		date('Y-m-d'), 
-		date('Y-m-d'), 
+		$user,
+		date('Y-m-d'),
+		date('Y-m-d'),
 		hash('sha256',$pass)));
 		//password_hash($pass, PASSWORD_DEFAULT, $options)));
 
@@ -21,6 +21,6 @@ catch(PDOException $e) {
 	echo $e->getMessage();
 }
 
-header("Location: Projeto.html");
+header("Location: ../../index.php");
 exit;
 ?>

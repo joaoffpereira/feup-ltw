@@ -1,10 +1,3 @@
-/** database.sql
-*	Autores:
-*	Andre Pires - ei12058
-*   Henrique Ferrolho - ei12079
-*	Joao Pereira - ei12023
-*/
-
 .headers ON
 .mode columns
 

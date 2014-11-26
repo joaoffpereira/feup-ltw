@@ -24,6 +24,6 @@ try {
   die($e->getMessage());
 }
 
-header("Location: Projeto.html");
+header("Location: ../../index.php");
 exit;
 ?>
