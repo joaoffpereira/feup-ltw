@@ -6,6 +6,4 @@
   } catch (PDOException $e) {
      die($e->getMessage());
   }
-
-  /*header('Location: view_post.php?id=' . $_POST['id']);*/
 ?>
