@@ -7,12 +7,17 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-12 main">
-				<h1 class="page-header">Welcome, <?= $_SESSION['username'] ?>!</h1>
+				<h1 class="page-header">My polls</h1>
 
 				<div class="row placeholders">
 					<div class="col-xs-6 col-sm-3 placeholder">
 						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>What is the best band of all time?</h4>
+						<span class="text-muted">by Henrique Ferrolho</span>
+					</div>
+					<div class="col-xs-6 col-sm-3 placeholder">
+						<img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+						<h4>Who is the last character to die in Game of Thrones?</h4>
 						<span class="text-muted">by Henrique Ferrolho</span>
 					</div>
 				</div>

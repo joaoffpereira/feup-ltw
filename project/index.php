@@ -6,6 +6,24 @@
 			include 'templates/signUp.php';
 			break;
 
+		case 'feed':
+			if ($_SESSION['username'] != null)
+				include 'templates/feed.php';
+			else {
+				var_dump("You are not signed in.");
+				include 'templates/signIn.php';
+			}
+			break;
+		
+		case 'myPolls':
+			if ($_SESSION['username'] != null)
+				include 'templates/myPolls.php';
+			else {
+				var_dump("You are not signed in.");
+				include 'templates/signIn.php';
+			}
+			break;
+		
 		case 'profile':
 			if ($_SESSION['username'] != null)
 				include 'templates/profile.php';
