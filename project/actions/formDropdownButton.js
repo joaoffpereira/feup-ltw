@@ -4,7 +4,7 @@ $(function() {
 		$(".btn:first-child").val($(this).text());
 
 		$("#gender").val($(this).text());
-		console.log($(this).text());
+		//console.log($(this).text());
 	});
 
 	$(".form-signin").on('submit', function() {
