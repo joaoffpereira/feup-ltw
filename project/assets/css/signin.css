@@ -47,6 +47,10 @@ footer {
   margin-top: -1px;
   border-radius: 4px;
 }
+.form-signin .form-dropdown li a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 
 .btn-group>.btn:first-child {
   text-align: left;
