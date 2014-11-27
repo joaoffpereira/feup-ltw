@@ -1,6 +1,8 @@
 <?php
 	include_once("connection.php");
 
+	for($i=1; isset($_POST['question'.$i]); $i++)
+
 	try {
 		$question = $_POST["question"];
 		$isPublic = $_POST["isPublic"];

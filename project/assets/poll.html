@@ -1,0 +1,103 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creating Poll - PollHub</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.css">
+  </head>
+
+<body>
+  <form id="questions">
+    <div class="question" align="left">
+      <h4>Put here your question.
+        <div>
+          <form id="idPoll" method="post">
+            <input type="text" number="1" name="question1" size="100" placeholder="Question" required autofocus>
+          </form>
+        </div>
+      </h4>
+
+      <h5>Options:
+        <div>
+          <ul>
+            <form id="idOption" method="post">
+              <li>
+                <input type="text" number="1" question="1" class="option" id="option1" name="option1-1" size="100" placeholder="Option 1" required>
+              </li>
+            </form>
+          </ul>  
+        </div>
+      </h5>
+    </div>
+  </form>
+
+  <div>
+    <h4>Add question
+      <a href="" id="new_question" onclick="javaScript:addNewQuestion();">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h4>
+  </div>
+
+  <script type="text/javascript">
+    $('document').ready(function() {
+      var input = $("input.option");
+
+      input.on('focus', function() {
+        addNewOption(input);
+      });
+    });
+
+    function addNewOption(input) {
+        var number = input.attr('number');
+        number = parseInt(number)+1;
+        
+        input.unbind('focus');
+        
+        input = $('<input>')
+          .attr({'number':number, 'placeholder':'Option '+number, 'name':'option'+number, 'type':'text', 'size':100})
+          .addClass('option')
+          .bind('focus', function() {
+            addNewOption(input)
+          });
+
+        $('#idOption').append($('<li>').html(input));
+    }
+
+
+  var question='';
+  $('document').ready(function() {
+
+      $('#new_question').on('click', function(event) {
+        event.preventDefault();
+        question = $(".question").last().clone(true);
+        var i1 = question.children('input:nth-child(1)');
+        var i2 = question.children('input:nth-child(2)');
+
+        var question_number = i1.attr('number');
+
+        question_number = parseInt(question_number)+1;
+
+        i1.attr('number', question_number).attr('name', 'question'+question_number);
+        i2.attr('name', 'option'+question_number+'-1').attr('question', question_number);
+        i2.unbind('click');
+        i2.bind('click', function() {
+          addNewOption();
+        });
+
+        $(".question").last().append(question);
+    });
+  }) 
+  function addNewQuestion() {
+    
+    /*
+    var newQuestion = $('#questions').first();
+    $("#questions").append($('#questions').html());
+    */
+  }
+  </script>
+</body>
+</html>
