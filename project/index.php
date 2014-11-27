@@ -11,16 +11,10 @@
     <title>PollHub</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/frameworks/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="assets/signin.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -30,7 +24,7 @@
     </header>
 
     <div class="container">
-      <form class="form-signin" role="form" action="logic/classes/signin.php" method="POST">
+      <form class="form-signin" role="form" action="logic/classes/signIn.php" method="POST">
         <h2 class="form-signin-heading">Sign in</h2>
 
         <label for="inputUsername" class="sr-only">Username</label>
@@ -41,17 +35,23 @@
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-    </div> <!-- /container -->
+    </div>
 
     <div class="create-account">
       <p><a id="link-signup" href="registerPage.php">Create an account</a></p>
     </div>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="assets/frameworks/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-
     <footer>
       <p>Copyright © 2014 PollHub</p>
     </footer>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
