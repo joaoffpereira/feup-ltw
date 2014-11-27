@@ -14,20 +14,16 @@
     <div class="question" align="left">
       <h4>Put here your question.
         <div>
-          <form id="idPoll" method="post">
-            <input type="text" number="1" name="question1" size="100" placeholder="Question" required autofocus>
-          </form>
+           <input type="text" class="input_question" number="1" name="question1" size="100" placeholder="Question" required autofocus>
         </div>
       </h4>
 
       <h5>Options:
         <div>
           <ul>
-            <form id="idOption" method="post">
-              <li>
-                <input type="text" number="1" question="1" class="option" id="option1" name="option1-1" size="100" placeholder="Option 1" required>
-              </li>
-            </form>
+            <li>
+              <input type="text" number="1" class="input_option" name="option1-1" size="100" placeholder="Option 1" required>
+            </li>
           </ul>  
         </div>
       </h5>
@@ -36,68 +32,59 @@
 
   <div>
     <h4>Add question
-      <a href="" id="new_question" onclick="javaScript:addNewQuestion();">
+      <a href="" id="new_question">
         <i class="glyphicon glyphicon-plus"></i>
       </a>
     </h4>
   </div>
 
   <script type="text/javascript">
-    $('document').ready(function() {
-      var input = $("input.option");
-
-      input.on('focus', function() {
-        addNewOption(input);
-      });
-    });
-
-    function addNewOption(input) {
-        var number = input.attr('number');
-        number = parseInt(number)+1;
-        
-        input.unbind('focus');
-        
-        input = $('<input>')
-          .attr({'number':number, 'placeholder':'Option '+number, 'name':'option'+number, 'type':'text', 'size':100})
-          .addClass('option')
-          .bind('focus', function() {
-            addNewOption(input)
-          });
-
-        $('#idOption').append($('<li>').html(input));
-    }
-
-
-  var question='';
+  var myClone;
+  var myLi;
+  // Quando o doc carrega
   $('document').ready(function() {
 
-      $('#new_question').on('click', function(event) {
-        event.preventDefault();
-        question = $(".question").last().clone(true);
-        var i1 = question.children('input:nth-child(1)');
-        var i2 = question.children('input:nth-child(2)');
+    // Faço copia a primeira vez
+    myClone = $(".question").last().clone();
+    $('.input_option').bind('focus', function() {
+      bindOption($(this), 1);
+    })
 
-        var question_number = i1.attr('number');
+    // adiona listener ao #new_question
+    $('#new_question').on('click', function(event) {
+      // Impede o link de trocar de página
+      event.preventDefault();
+      var question_number = myClone.find('input.input_question').attr('number');
+      question_number = parseInt(question_number)+1;
 
-        question_number = parseInt(question_number)+1;
+      myClone.find('.input_question').attr({
+        'number':question_number, 'name':'question'+question_number, 'placeholder':'Question '+question_number
+      });
 
-        i1.attr('number', question_number).attr('name', 'question'+question_number);
-        i2.attr('name', 'option'+question_number+'-1').attr('question', question_number);
-        i2.unbind('click');
-        i2.bind('click', function() {
-          addNewOption();
-        });
+      myClone.find('.input_option').attr({
+        'name':'option'+question_number+'-1', 'placeholder':'Option 1'
+      }).bind('focus', function() {
+        bindOption($(this), question_number);
+      });
 
-        $(".question").last().append(question);
+      // Adionar no fim do form
+      $('form#questions').append(myClone);  
+      
+      // Nova cópia para voltar a adicionar
+      myClone = myClone.clone();
     });
-  }) 
-  function addNewQuestion() {
-    
-    /*
-    var newQuestion = $('#questions').first();
-    $("#questions").append($('#questions').html());
-    */
-  }
+
+    function bindOption(myOption, question_number) {
+      var option_number = myOption.attr('number');
+        option_number = parseInt(option_number)+1;
+        myLi = myOption.parent().clone(true);
+        myLi.find('input').attr({
+          'number':option_number, 'name':'option'+question_number+'-'+option_number, 'placeholder':'Option '+option_number
+        });
+        myOption.parent().parent().append(myLi);
+        myOption.unbind('focus');
+    }
+  });
   </script>
 </body>
 </html>
