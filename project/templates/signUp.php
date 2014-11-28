@@ -19,10 +19,10 @@
 
 			<input type="hidden" id="gender" name="inputGender" value="">
 			<div class="btn-group btn-input clearfix form-dropdown">
-				<button type="button" class="btn btn-default dropdown-toggle form-control" data-toggle="dropdown">
+				<button id="genderButton" type="button" class="btn btn-default dropdown-toggle form-control" data-toggle="dropdown">
 					<span data-bind="label">Gender </span><span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu form-dropdown" role="menu">
+				<ul id="genderMenu" class="dropdown-menu form-dropdown" role="menu">
 					<li><a href="#">Female</a></li>
 					<li><a href="#">Male</a></li>
 				</ul>

@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.css">
 
-  <form id="questions" action="../logic/classes/addPoll.php">
+  <form id="questions" action="logic/classes/addPoll.php">
     <div class="question" align="left">
       <h4>Put here your question.
         <div class="form-group-lg">
@@ -17,7 +17,7 @@
       </h5>
     </div>
     <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Submit Poll</button>-->
-  </form>
+  <!--</form>-->
 
   <div>
     <h4>Add question
