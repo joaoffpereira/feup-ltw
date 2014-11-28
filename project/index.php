@@ -10,8 +10,9 @@
 			if ($_SESSION['username'] != null)
 				include 'templates/feed.php';
 			else {
-				var_dump("You are not signed in.");
-				include 'templates/signIn.php';
+				echo "<script type=\"text/javascript\">
+				window.alert('You are not signed in.');
+				window.location.href = 'index.php';</script>"; 
 			}
 			break;
 		
@@ -19,8 +20,9 @@
 			if ($_SESSION['username'] != null)
 				include 'templates/myPolls.php';
 			else {
-				var_dump("You are not signed in.");
-				include 'templates/signIn.php';
+				echo "<script type=\"text/javascript\">
+				window.alert('You are not signed in.');
+				window.location.href = 'index.php';</script>"; 
 			}
 			break;
 		
@@ -28,8 +30,9 @@
 			if ($_SESSION['username'] != null)
 				include 'templates/profile.php';
 			else {
-				var_dump("You are not signed in.");
-				include 'templates/signIn.php';
+				echo "<script type=\"text/javascript\">
+				window.alert('You are not signed in.');
+				window.location.href = 'index.php';</script>"; 
 			}
 			break;
 		
@@ -37,8 +40,9 @@
 			if ($_SESSION['username'] != null)
 				include 'logic/classes/signOut.php';
 			else {
-				var_dump("You are not signed in.");
-				include 'templates/signIn.php';
+				echo "<script type=\"text/javascript\">
+				window.alert('You are not signed in.');
+				window.location.href = 'index.php';</script>"; 
 			}
 			break;
 
