@@ -2,8 +2,6 @@
 	include_once("connection.php");
 
 	try {
-		$idPoll = $_POST["idPoll"];
-		$question = $_POST["question"];
 		$image = $_POST["image"];
 
 		$stmt = $dbh->prepare(
@@ -14,10 +12,15 @@
 			$idPoll,
 			$question,
 			$image));
+	
+	$idQuestion = db2_last_insert_id($dbh);
+
+	for($j=1; isset($_POST['option'.$idQuestion.'-'.$j]); $j++) {
+		$option = $_POST['option'.$idQuestion.'-'.$j];
+		include("addOption.php");
+	}
+
 	} catch(PDOException $e) {
 		echo $e->getMessage();
 	}
-
-	header("Location: ../../index.php");
-	exit;
 ?>

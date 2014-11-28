@@ -1,34 +1,22 @@
-
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Creating Poll - PollHub</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.css">
-  </head>
 
-<body>
-  <form id="questions" action="../logic/addPoll.php">
+  <form id="questions" action="../logic/classes/addPoll.php">
     <div class="question" align="left">
       <h4>Put here your question.
-        <div>
-           <input type="text" class="input_question" number="1" name="question1" size="100" placeholder="Question" required autofocus>
+        <div class="form-group-lg">
+           <input type="text" class="form-control input_question" number="1" name="question1" size="100" placeholder="Question 1" autofocus> <!--required missing-->
         </div>
       </h4>
 
       <h5>Options:
-        <div>
-          <ul>
-            <li>
-              <input type="text" number="1" class="input_option" name="option1-1" size="100" placeholder="Option 1" required>
-            </li>
-          </ul>  
+        <div class="form-group-sm">
+              <input type="text" number="1" class="form-control input_option" name="option1-1" size="100" placeholder="Option 1"> <!--required="true"-->
         </div>
       </h5>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit Poll</button>
+    <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Submit Poll</button>-->
   </form>
 
   <div>
@@ -80,12 +68,10 @@
         option_number = parseInt(option_number)+1;
         myLi = myOption.parent().clone(true);
         myLi.find('input').attr({
-          'number':option_number, 'name':'option'+question_number+'-'+option_number, 'placeholder':'Option '+option_number
+          'number':option_number, 'name':'option'+question_number+'-'+option_number, 'placeholder':'Option '+option_number,
         });
         myOption.parent().parent().append(myLi);
         myOption.unbind('focus');
     }
   });
   </script>
-</body>
-</html>

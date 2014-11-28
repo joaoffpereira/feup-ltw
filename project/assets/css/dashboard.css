@@ -106,3 +106,8 @@ body {
 .placeholder img:hover {
   box-shadow: 0 0 1em gray;
 }
+
+
+#addNewPollButton {
+  margin-bottom: 20px;
+}

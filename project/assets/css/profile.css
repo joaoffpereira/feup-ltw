@@ -4,7 +4,8 @@ body {
   background-color: #eee;
 }
 
-header {
+header,
+footer {
   text-align: center;
 }
 

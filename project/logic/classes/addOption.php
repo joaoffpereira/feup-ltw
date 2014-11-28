@@ -2,9 +2,6 @@
 	include_once("connection.php");
 
 	try {
-		$idQuestion = $_POST["idQuestion"];
-		$option = $_POST["option"];
-
 		$stmt = $dbh->prepare(
 			'INSERT INTO Option
 			(idQuestion, counter, option)
@@ -16,7 +13,4 @@
 	} catch(PDOException $e) {
 		echo $e->getMessage();
 	}
-
-	header("Location: ../../index.php");
-	exit;
 ?>
