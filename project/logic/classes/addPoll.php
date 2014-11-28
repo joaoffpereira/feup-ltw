@@ -1,4 +1,8 @@
 <?php
+	echo "<script type=\"text/javascript\">
+				window.alert('You are not signed in.');
+				window.location.href = 'action.php';</script>";
+
 	include_once("connection.php");
 
 	try {

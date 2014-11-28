@@ -5,6 +5,7 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
 	<script src="actions/formDropdownButton.js"></script>
+	<script src="actions/multipleQuestions.js"></script>
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->
