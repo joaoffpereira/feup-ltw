@@ -3,6 +3,8 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
+	
+	<a href="actions.php?action=myPolls">get it</a>
 
 	<div class="container-fluid">
 		<div class="row">

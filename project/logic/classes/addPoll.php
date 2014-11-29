@@ -39,6 +39,6 @@
 		echo $e->getMessage();
 	}
 
-	/*header("Location: index.php?page=myPolls");
-	exit;*/
+	header("Location: index.php?page=myPolls");
+	exit;
 ?>

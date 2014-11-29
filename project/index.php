@@ -46,6 +46,12 @@
 			}
 			break;
 
+		case 'viewPoll':
+			include 'logic/classes/getMyPolls.php';
+			foreach ($polls as $poll)
+				include 'templates/viewPoll.php?=$poll[\'idPoll\']';
+			break;
+
 		default:
 			include 'templates/signIn.php';
 			break;
