@@ -7,19 +7,18 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-12 main">
-				<h1 class="page-header">My polls</h1>
+				<div class="page-header">
+					<h1>My polls</h1>
 
-				<div id="addNewPollButton">
+					<!--<div id="addNewPollButton">-->
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  						+ Add New Poll
+						<span class="glyphicon glyphicon-plus"></span> Add new poll
 					</button>
 
 					<!-- Modal -->
 					<?php include 'addPollModal.php'; ?>
 				</div>
-
-				<div> </div>
 
 				<div class="row placeholders">
 					<div class="col-xs-6 col-sm-3 placeholder">

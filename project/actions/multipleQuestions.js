@@ -17,17 +17,20 @@ $(function() {
 		question_number = parseInt(question_number)+1;
 
 		myClone.find('.input_question').attr({
-			'number':question_number, 'name':'question'+question_number, 'placeholder':'Question '+question_number
+			'number': question_number,
+			'name': 'question' + question_number,
+			'placeholder': 'Ask something...'
 		});
 
 		myClone.find('.input_option').attr({
-			'name':'option'+question_number+'-1', 'placeholder':'Option 1'
+			'name': 'option' + question_number + '-1',
+			'placeholder': 'Add an option...'
 		}).bind('focus', function() {
 			bindOption($(this), question_number);
 		});
 
 		// Adionar no fim do form
-		$('form#questions .modal-body').append(myClone);  
+		$('form#questions .modal-body .questions').append(myClone);  
 
 		// Nova cópia para voltar a adicionar
 		myClone = myClone.clone();
@@ -35,11 +38,15 @@ $(function() {
 
 	function bindOption(myOption, question_number) {
 		var option_number = myOption.attr('number');
-		option_number = parseInt(option_number)+1;
+		option_number = parseInt(option_number) + 1;
+
 		myLi = myOption.parent().clone(true);
 		myLi.find('input').attr({
-			'number':option_number, 'name':'option'+question_number+'-'+option_number, 'placeholder':'Option '+option_number,
+			'number': option_number,
+			'name': 'option' + question_number + '-' + option_number,
+			'placeholder': 'Add an option...'
 		});
+
 		myOption.parent().parent().append(myLi);
 		myOption.unbind('focus');
 	}
