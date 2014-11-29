@@ -23,6 +23,6 @@
 		die($e->getMessage());
 	}
 
-	header("Location: index.php?page=feed");
+	header("Location: index.php?page=profile");
 	exit;
 ?>

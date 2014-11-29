@@ -11,13 +11,13 @@
 
 				<div class="row placeholders">
 				<!--	   <div class="col-md-3">
-        <div class="text-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-          <h6>Upload a different photo...</h6>
+        			<div class="text-center">
+          				<img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          			<h6>Upload a different photo...</h6>
           
-          <input type="file" class="form-control">
-        </div>
-      </div>-->
+          			<input type="file" class="form-control">
+        		</div>
+      			</div>-->
 					<div class="col-xs-6 col-sm-3 placeholder">
 						<img id="currentImage" data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
 						<div class="newImageBox">

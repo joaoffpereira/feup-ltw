@@ -1,18 +1,16 @@
 <?php
+	echo "<script type=\"text/javascript\">
+				window.alert('You are not signed in.');
+				window.location.href = 'action.php';</script>";
+
 	include_once("connection.php");
 
-	
-
 	try {
-		/* TODO !!
+		/* TODO !!*/
 		$isPublic = $_POST["isPublic"];
 		$anyoneCanAddOptions = $_POST["anyoneCanAddOptions"]; 
 		$idCategory = $_POST["idCategory"];
-		$image = $_POST["image"]; */
-
-		$isPublic = 1;
-		$anyoneCanAddOptions = 1;
-		$idCategory = 1;
+		/*$image = $_POST["image"]; */
 
 		$stmt = $dbh->prepare(
 			'INSERT INTO Poll

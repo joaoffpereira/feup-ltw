@@ -23,8 +23,8 @@
 		$stmt->execute(array(
 			$user, 
 			hash('sha256',$pass),
-			date('Y-m-d h:i:s'), 
-			date('Y-m-d h:i:s'),
+			date('Y-m-d H:i:s'), 
+			date('Y-m-d H:i:s'),
 			$gender)); 
 	} catch(PDOException $e) {
 		echo $e->getMessage();

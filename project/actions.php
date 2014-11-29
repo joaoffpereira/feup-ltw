@@ -13,6 +13,10 @@
 		case 'signOut':
 			include 'logic/classes/signOut.php';
 			break;
+
+		case 'addPoll':
+			include 'logic/classes/addPoll.php';
+			break;
 		
 		default:
 			break;
