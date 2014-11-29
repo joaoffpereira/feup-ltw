@@ -3,25 +3,13 @@ include_once("connection.php");
 
 try {
 	$currentUsername = $_SESSION['username'];
-	$newUsername = $_POST["newUsername"];
+	$newPassword = $_POST["newPassword"];
+	$newPasswordConfirmation = $_POST["newPasswordConfirmation"];
 
-	if ($newUsername === "") {
+	if ($newPassword !== $newPasswordConfirmation) {
 		echo "
 		<script type=\"text/javascript\">
-			window.alert('A new username was not specified.');
-			window.location.href = 'index.php?page=profile';
-		</script>";
-		break;
-	}
-
-	$stmt = $dbh->prepare(
-		'SELECT * FROM User
-		WHERE username = ?');
-	$stmt->execute(array($newUsername));
-	if ($stmt->fetch()) {
-		echo "
-		<script type=\"text/javascript\">
-			window.alert('That username is already taken.');
+			window.alert('Those passwords do not match.');
 			window.location.href = 'index.php?page=profile';
 		</script>";
 		break;
@@ -29,17 +17,15 @@ try {
 
 	$stmt = $dbh->prepare(
 		'UPDATE User
-		SET username = ?
+		SET password = ?
 		WHERE username = ?');
 	$stmt->execute(array(
-		$newUsername,
+		hash('sha256', $newPassword),
 		$currentUsername));
-
-	$_SESSION['username'] = $newUsername;
 
 	echo "
 	<script type=\"text/javascript\">
-		window.alert('Username successfully edited.');
+		window.alert('Password successfully edited.');
 		window.location.href = 'index.php?page=profile';
 	</script>";
 	break;
