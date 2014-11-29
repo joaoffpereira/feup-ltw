@@ -1,6 +1,5 @@
 <?php
 	include_once("connection.php");
-
 	try {
 		$user = $_POST["inputUsername"];
 		$pass = $_POST["inputPassword"];

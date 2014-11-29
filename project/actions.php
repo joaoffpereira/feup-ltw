@@ -1,6 +1,5 @@
 <?php
 	session_start();
-
 	switch ($_GET[action]) {
 		case 'signUp':
 			include 'logic/classes/signUp.php';
@@ -19,8 +18,7 @@
 			break;
 
 		case 'editUsername':
-			echo 'test';
-			include 'logic/classes/editUsername.php'
+			include 'logic/classes/editUsername.php';
 			break;
 		
 		default:
