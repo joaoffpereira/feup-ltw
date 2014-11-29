@@ -8,7 +8,7 @@
 				<h4 class="modal-title" id="myModalLabel">Add new poll</h4>
 			</div>
 
-	  		<form id="questions" action="actions.php?action=addPoll">
+	  		<form id="questions" method="POST" action="actions.php?action=addPoll">
 				<div class="modal-body">
 					<div class="questions">
 	    				<div class="question" align="left">
@@ -28,24 +28,24 @@
 				</div>
 
 				<div class="modal-footer">
-					<label><input type="checkbox" name="isPublic"> Public </label>
-					<label><input type="checkbox" name="anyoneCanAddOptions"> Users can add options </label>
+					<label><input type="checkbox" name="isPublic" value="Yes" checked> Public </label>
+					<label><input type="checkbox" name="anyoneCanAddOptions" value="Yes" checked> Users can add options </label>
 					<input type="hidden" id="category" name="inputCategory" value="">
 					<div class="btn-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							Category <span class="caret"></span>
 						</button>
 						<ul id="categoryMenu" class="dropdown-menu" role="menu">
-							<li><a href="#">Culture</a></li>
-							<li><a href="#">Sports</a></li>
-							<li><a href="#">Technology</a></li>
-							<li><a href="#">Media</a></li>
+							<li><a href="#" n="1">Culture</a></li>
+							<li><a href="#" n="2">Sports</a></li>
+							<li><a href="#" n="3">Technology</a></li>
+							<li><a href="#" n="4">Media</a></li>
 							<li class="divider"></li>
-							<li><a href="#">Other</a></li>
+							<li><a href="#" n="5">Other</a></li>
 						</ul>
 					</div>
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					<button formaction="actions.php?action=addPoll" type="submit" class="btn btn-primary">Save changes</button>
+					<button type="submit" class="btn btn-primary" name="submitcenas">Save changes</button>
 				</div>
 			</form>
 		</div>

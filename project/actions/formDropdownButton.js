@@ -6,7 +6,7 @@ $(function() {
 		if($(this).parent().parent().attr("id") == "genderMenu") 
 			$("#gender").val($(this).text());
 		else if($(this).parent().parent().attr("id") == "categoryMenu") 
-			$("#category").val($(this).text());
+			$("#category").val($(this).attr("n"));
 		
 	});
 

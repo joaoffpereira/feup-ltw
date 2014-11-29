@@ -10,7 +10,6 @@
 				<div class="page-header">
 					<h1>My polls</h1>
 
-					<!--<div id="addNewPollButton">-->
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 						<span class="glyphicon glyphicon-plus"></span> Add new poll
