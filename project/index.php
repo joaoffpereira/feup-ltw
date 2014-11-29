@@ -1,61 +1,52 @@
 <?php
-	include 'templates/header.php';
+include 'templates/header.php';
 
-	switch ($_GET['page']) {
-		case 'signUp':
-			include 'templates/signUp.php';
-			break;
+$currentPage = $_GET['page'];
 
-		case 'feed':
-			if ($_SESSION['username'] != null)
-				include 'templates/feed.php';
-			else {
-				echo "<script type=\"text/javascript\">
-				window.alert('You are not signed in.');
-				window.location.href = 'index.php';</script>"; 
-			}
-			break;
-		
-		case 'myPolls':
-			if ($_SESSION['username'] != null)
-				include 'templates/myPolls.php';
-			else {
-				echo "<script type=\"text/javascript\">
-				window.alert('You are not signed in.');
-				window.location.href = 'index.php';</script>"; 
-			}
-			break;
-		
-		case 'profile':
-			if ($_SESSION['username'] != null)
-				include 'templates/profile.php';
-			else {
-				echo "<script type=\"text/javascript\">
-				window.alert('You are not signed in.');
-				window.location.href = 'index.php';</script>"; 
-			}
-			break;
-		
-		case 'signOut':
-			if ($_SESSION['username'] != null)
-				include 'logic/classes/signOut.php';
-			else {
-				echo "<script type=\"text/javascript\">
-				window.alert('You are not signed in.');
-				window.location.href = 'index.php';</script>"; 
-			}
-			break;
+$pagesWithMandatoryLogin = array('feed', 'myPolls', 'profile', 'signOut');
 
-		case 'viewPoll':
-			include 'logic/classes/getMyPolls.php';
-			foreach ($polls as $poll)
-				include 'templates/viewPoll.php?=$poll[\'idPoll\']';
-			break;
+// if the current page is one of the pages with mandatory login
+foreach ($pagesWithMandatoryLogin as $page) {
+	// and user is not logged in
+	if ($currentPage === $page && $_SESSION['username'] === null) {
+		echo "
+		<script type=\"text/javascript\">
+			window.alert('You are not signed in.');
+			window.location.href = 'index.php';
+		</script>
+		";
 
-		default:
-			include 'templates/signIn.php';
-			break;
+		// redirect to sign in page
+		$currentPage = 'signIn';
+		break;
 	}
+}
 
-	include 'templates/footer.php';
+switch ($currentPage) {
+	case 'signUp':
+	include 'templates/signUp.php';
+	break;
+
+	case 'feed':
+	include 'templates/feed.php';
+	break;
+
+	case 'myPolls':
+	include 'templates/myPolls.php';
+	break;
+
+	case 'profile':
+	include 'templates/profile.php';
+	break;
+
+	case 'signOut':
+	include 'logic/classes/signOut.php';
+	break;
+
+	default:
+	include 'templates/signIn.php';
+	break;
+}
+
+include 'templates/footer.php';
 ?>
