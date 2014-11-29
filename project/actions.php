@@ -17,6 +17,11 @@
 		case 'addPoll':
 			include 'logic/classes/addPoll.php';
 			break;
+
+		case 'editUsername':
+			echo 'test';
+			include 'logic/classes/editUsername.php'
+			break;
 		
 		default:
 			break;

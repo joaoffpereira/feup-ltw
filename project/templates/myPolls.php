@@ -12,7 +12,7 @@
 
 					<!-- Button trigger modal -->
 					<div class="pull-right">
-						<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
+						<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#addPollModal">
 							<span class="glyphicon glyphicon-plus"></span> Add new poll
 						</button>
 					</div>
