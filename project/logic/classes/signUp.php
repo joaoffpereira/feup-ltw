@@ -11,10 +11,18 @@ try {
 	if (!isset($gender)) die('No gender');
 	if ($gender != "Female" && $gender != "Male") die('Invalid gender');
 
-	$stmt = $dbh->prepare('SELECT * FROM User WHERE username = ?');
+	$stmt = $dbh->prepare(
+		'SELECT * FROM User
+		WHERE username = ?');
 	$stmt->execute(array($user));
-	if($stmt->fetch() !== false)
-		die('Username already in use');
+	if($stmt->fetch()) {
+		echo "
+		<script type=\"text/javascript\">
+			window.alert('That username is already taken.');
+			window.location.href = 'index.php?page=signUp';
+		</script>";
+		break;
+	}
 
 	$stmt = $dbh->prepare(
 		'INSERT INTO User

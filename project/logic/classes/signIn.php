@@ -1,28 +1,39 @@
 <?php
-	include_once("connection.php");
+include_once("connection.php");
 
-	$username = $_POST["inputUsername"];
-	$password = $_POST["inputPassword"];
+$username = $_POST["inputUsername"];
+$password = $_POST["inputPassword"];
 
-	if (!isset($username)) die('No username');
-	if (!isset($password)) die('No password');
+if (!isset($username)) die('No username');
+if (!isset($password)) die('No password');
 
-	try {
-		$stmt = $dbh->prepare('SELECT * FROM User WHERE username = ? AND password = ?');
-		$stmt->execute(array($username, hash('sha256', $password)));
-		$user = $stmt->fetch();
-
-		if ($user !== false) {
-			$_SESSION['idUser'] = $user['idUser'];
-			$_SESSION['username'] = $username;
-
-			$stmt = $dbh->prepare('UPDATE User SET lastLoginDate = ? WHERE idUser = ?');
-			$stmt->execute(array(date('Y-m-d H:i:s'), $_SESSION['idUser']));
-		} else die('Invalid Username or Password!');
-	} catch (PDOException $e) {
-		die($e->getMessage());
+try {
+	$stmt = $dbh->prepare(
+		'SELECT * FROM User
+		WHERE username = ?
+		AND password = ?');
+	$stmt->execute(array($username, hash('sha256', $password)));
+	if (!($user = $stmt->fetch())) {
+		echo "
+		<script type=\"text/javascript\">
+			window.alert('Invalid username or password.');
+			window.location.href = 'index.php';
+		</script>";
+		break;
 	}
 
-	header("Location: index.php?page=feed");
-	exit;
+	$_SESSION['idUser'] = $user['idUser'];
+	$_SESSION['username'] = $username;
+
+	$stmt = $dbh->prepare(
+		'UPDATE User
+		SET lastLoginDate = ?
+		WHERE idUser = ?');
+	$stmt->execute(array(date('Y-m-d H:i:s'), $_SESSION['idUser']));
+} catch (PDOException $e) {
+	die($e->getMessage());
+}
+
+header("Location: index.php?page=feed");
+exit;
 ?>
