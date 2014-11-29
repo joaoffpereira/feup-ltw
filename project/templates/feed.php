@@ -10,40 +10,40 @@
 				<h1 class="page-header">Feed</h1>
 
 				<div class="row placeholders">
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>What is the best band of all time?</h4>
 						<span class="text-muted">by Henrique Ferrolho</span>
 					</div>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>How many eggs have we eaten this week?</h4>
 						<span class="text-muted">by João Pereira</span>
 					</div>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Which is the best: C++ or Java?</h4>
 						<span class="text-muted">by André Pires</span>
 					</div>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Who is the last character to die in Game of Thrones?</h4>
 						<span class="text-muted">by Henrique Ferrolho</span>
 					</div>
 				</div>
 				<div class="row placeholders">
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>What is the best band of all time?</h4>
 						<span class="text-muted">by Henrique Ferrolho</span>
 					</div>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>How many eggs have we eaten this week?</h4>
 						<span class="text-muted">by João Pereira</span>
 					</div>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Which is the best: C++ or Java?</h4>
 						<span class="text-muted">by André Pires</span>
 					</div>

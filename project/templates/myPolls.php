@@ -24,13 +24,13 @@
 				</div>
 
 				<div class="row placeholders">
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>What is the best band of all time?</h4>
 						<span class="text-muted">by Henrique Ferrolho</span>
 					</div>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+					<div class="col-xs-12 col-sm-3 placeholder">
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Who is the last character to die in Game of Thrones?</h4>
 						<span class="text-muted">by Henrique Ferrolho</span>
 					</div>

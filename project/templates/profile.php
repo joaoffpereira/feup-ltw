@@ -12,14 +12,14 @@
 				<h1 class="profile-greeting">Welcome, <?= $_SESSION['username'] ?>.</h1>
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-3 profile-pic">
+					<div class="col-xs-12 col-sm-2 profile-pic">
 						<img id="currentImage" src="assets/img/blank-profile.png" class="img-responsive" alt="Blank profile picture">
 						<div class="newImageBox">
 							<input id="profile-image-upload" class="hidden" type="file">
 						</div>
 					</div>
 
-					<div class="col-xs-12 col-sm-3">
+					<div class="col-xs-12 col-sm-2">
 						<div class="edit-profile-btn text-center">
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editUsernameModal">
