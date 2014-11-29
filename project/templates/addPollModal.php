@@ -53,25 +53,6 @@
 				</div>
 
 				<div class="modal-footer">
-<<<<<<< HEAD
-=======
-					<label><input type="checkbox" name="isPublic" value="Yes" checked> Public </label>
-					<label><input type="checkbox" name="anyoneCanAddOptions" value="Yes" checked> Users can add options </label>
-					<input type="hidden" id="category" name="inputCategory" value="">
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							Category <span class="caret"></span>
-						</button>
-						<ul id="categoryMenu" class="dropdown-menu" role="menu">
-							<li><a href="#" n="1">Culture</a></li>
-							<li><a href="#" n="2">Sports</a></li>
-							<li><a href="#" n="3">Technology</a></li>
-							<li><a href="#" n="4">Media</a></li>
-							<li class="divider"></li>
-							<li><a href="#" n="5">Other</a></li>
-						</ul>
-					</div>
->>>>>>> 35eefb7fcc1e8ae1eb94922a7240e2cf79dc48a9
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 					<button type="submit" class="btn btn-primary" name="submitcenas">Save changes</button>
 				</div>
