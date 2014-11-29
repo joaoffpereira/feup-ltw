@@ -13,11 +13,16 @@
 			$question,
 			$image));
 	
-	$idQuestion = db2_last_insert_id($dbh);
+	
+	$idQuestion = $dbh->lastInsertId();
 
-	for($j=1; isset($_POST['option'.$idQuestion.'-'.$j]); $j++) {
-		$option = $_POST['option'.$idQuestion.'-'.$j];
-		include("addOption.php");
+	$optionN = 'option'.$i.'-1';
+
+	for($j=1; isset($_POST[$optionN]); $j++, $optionN = 'option'.$i.'-'.$j) {
+		$option = $_POST[$optionN];
+
+		if($option !== "")
+			include("addOption.php");
 	}
 
 	} catch(PDOException $e) {

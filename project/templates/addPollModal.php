@@ -17,12 +17,12 @@
 								Category <span class="caret"></span>
 							</button>
 							<ul id="categoryMenu" class="dropdown-menu" role="menu">
-								<li><a href="#">Culture</a></li>
-								<li><a href="#">Sports</a></li>
-								<li><a href="#">Technology</a></li>
-								<li><a href="#">Media</a></li>
+								<li><a href="#" n="1">Culture</a></li>
+								<li><a href="#" n="2">Sports</a></li>
+								<li><a href="#" n="3">Technology</a></li>
+								<li><a href="#" n="4">Media</a></li>
 								<li class="divider"></li>
-								<li><a href="#">Other</a></li>
+								<li><a href="#" n="5">Other</a></li>
 							</ul>
 						</div>
 

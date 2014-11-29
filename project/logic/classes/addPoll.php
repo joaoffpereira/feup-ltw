@@ -2,6 +2,8 @@
 	include_once("connection.php");
 
 	try {
+
+		var_dump($_POST['isPublic']);
 		if(isset($_POST['isPublic']) && $_POST['isPublic'] == 'Yes') 
 			$isPublic = 1;
 		else $isPublic = 0;
@@ -24,11 +26,12 @@
 			$image,
 			$idCategory));
 
-	/*$idPoll = db2_last_insert_id($dbh);*/
-	$idPoll = 1;
+	$idPoll = $dbh->lastInsertId();
 	
-	for($i=1; isset($_POST['question'.$i]); $i++) {
-		$question = $_POST['question'.$i];
+	$questionN = 'question1';
+
+	for($i=1; isset($_POST[$questionN]); $i++, $questionN = 'question'.$i) {
+		$question = $_POST[$questionN];
 		include("addQuestion.php");
 	}
 
