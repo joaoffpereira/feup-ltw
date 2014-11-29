@@ -45,6 +45,12 @@ try {
 	break;
 } catch(PDOException $e) {
 	echo $e->getMessage();
+	echo "
+	<script type=\"text/javascript\">
+		window.alert('Could not update database, please try again later.');
+		window.location.href = 'index.php?page=profile';
+	</script>";
+	break;
 }
 
 header("Location: index.php?page=profile");

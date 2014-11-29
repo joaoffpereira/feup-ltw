@@ -29,13 +29,19 @@ try {
 		(username, password, lastLoginDate, registerDate, gender)
 		VALUES (?,?,?,?,?)');
 	$stmt->execute(array(
-		$user, 
+		$user,
 		hash('sha256', $pass),
-		date('Y-m-d H:i:s'), 
 		date('Y-m-d H:i:s'),
-		$gender)); 
+		date('Y-m-d H:i:s'),
+		$gender));
 } catch(PDOException $e) {
 	echo $e->getMessage();
+	echo "
+	<script type=\"text/javascript\">
+		window.alert('Could not update database, please try again later.');
+		window.location.href = 'index.php?page=signUp';
+	</script>";
+	break;
 }
 
 header("Location: index.php");
