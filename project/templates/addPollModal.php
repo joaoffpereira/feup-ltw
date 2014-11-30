@@ -10,9 +10,9 @@
 
 	  		<form id="questions" method="POST" action="actions.php?action=addPoll">
 				<div class="modal-body">
-					<div class="poll-details row vertical-align">
+					<div class="poll-details row">
 						<input type="hidden" id="category" name="inputCategory" value="">
-						<div class="col-xs-6 col-sm-3 btn-group">
+						<div class="add-poll-modal-dropdown col-xs-6 col-sm-3 btn-group">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								Category <span class="caret"></span>
 							</button>
@@ -26,11 +26,11 @@
 							</ul>
 						</div>
 
-						<div class="col-xs-6 col-sm-3">
+						<div class="add-poll-modal-checkbox col-xs-6 col-sm-3">
 							<label><input type="checkbox" name="isPublic"> Private</label>
 						</div>
 
-						<div class="col-xs-6 col-sm-6">
+						<div class="add-poll-modal-checkbox col-xs-12 col-sm-6">
 							<label><input type="checkbox" name="anyoneCanAddOptions"> Allow anyone to add options</label>
 						</div>
 					</div>

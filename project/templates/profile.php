@@ -12,14 +12,14 @@
 				<h1 class="profile-greeting">Welcome, <?= $_SESSION['username'] ?>.</h1>
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-3 profile-pic">
+					<div class="col-xs-12 col-sm-2 profile-pic">
 						<img id="currentImage" src="assets/img/blank-profile.png" class="img-responsive" alt="Blank profile picture">
 						<div class="newImageBox">
 							<input id="profile-image-upload" class="hidden" type="file">
 						</div>
 					</div>
 
-					<div class="col-xs-12 col-sm-3">
+					<div class="col-xs-12 col-sm-2">
 						<div class="edit-profile-btn text-center">
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editUsernameModal">
@@ -40,7 +40,7 @@
 										<form class="form-edit-username" role="form" action="actions.php?action=editUsername" method="POST">
 											<div class="modal-body">
 												<div class="form-group">
-													<input type="text" class="form-control" name="newUsername" placeholder="New username">
+													<input type="text" class="form-control" name="newUsername" placeholder="New username" required>
 												</div>
 											</div>
 
@@ -71,16 +71,21 @@
 											<h4 class="modal-title" id="myModalLabel"> Edit password</h4>
 										</div>
 
-										<div class="modal-body">
-											<div class="form-group">
-												<input type="text" class="form-control" name="newPassword" placeholder="New Password">
+										<form class="form-edit-password" role="form" action="actions.php?action=editPassword" method="POST">
+											<div class="modal-body">
+												<div class="form-group">
+													<input type="password" class="form-control" name="newPassword" placeholder="New password" required>
+												</div>
+												<div class="form-group">
+													<input type="password" class="form-control" name="newPasswordConfirmation" placeholder="Confirm new password" required>
+												</div>
 											</div>
-										</div>
 
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-											<button type="button" class="btn btn-primary">Save changes</button>
-										</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-primary">Save changes</button>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>

@@ -21,6 +21,10 @@
 			include 'logic/classes/editUsername.php';
 			break;
 
+		case 'editPassword':
+			include 'logic/classes/editPassword.php';
+			break;
+
 		case 'myPolls': 
 			include 'logic/classes/getMyPolls.php';
 			break;

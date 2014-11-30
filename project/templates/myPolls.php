@@ -25,15 +25,15 @@
 				</div>
 
 				<div class="row placeholders">
-				<?php foreach ($polls as $currentPoll) { ?>
-					<div class="col-xs-6 col-sm-3 placeholder">
-						<a href= <?= "templates/viewPoll.php?id=".$currentPoll['idPoll'];?> > 
-						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-						</a>
-						<h4>What is the best band of all time?</h4>
-						<span class="text-muted"> <?= "by ".$currentPoll['author']; ?> </span>
- 					</div>
-				<?php } ?>
+					<?php foreach ($polls as $currentPoll) { ?>
+						<div class="col-xs-12 col-sm-3 placeholder">
+							<a href= <?= "templates/viewPoll.php?id=".$currentPoll['idPoll'];?> > 
+								<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
+							</a>
+							<h4>What is the best band of all time?</h4>
+							<span class="text-muted"> <?= "by ".$currentPoll['author']; ?> </span>
+ 						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

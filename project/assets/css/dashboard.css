@@ -52,6 +52,7 @@ body {
 	margin-bottom: 20px;
 }
 .placeholder img {
+	width: 200px;
 	display: inline-block;
 	border-radius: 5%;
 }
@@ -70,10 +71,16 @@ body {
 #addNewPollButton {
 	margin-bottom: 20px;
 }
+.add-poll-modal-dropdown {
+	margin-bottom: 15px;
+}
+.add-poll-modal-checkbox {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
 
 .poll-details{
 	border-bottom: 1px solid #eee;
-	padding-bottom: 15px;
 	margin-bottom: 15px;
 }
 .question {

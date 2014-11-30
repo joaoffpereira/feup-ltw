@@ -5,11 +5,9 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="assets/js/docs.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
 	<script src="actions/formDropdownButton.js"></script>
 	<script src="actions/multipleQuestions.js"></script>
 	
