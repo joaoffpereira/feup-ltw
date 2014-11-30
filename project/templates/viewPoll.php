@@ -15,12 +15,12 @@
 			<form id="answerPoll" method="POST" action="actions.php?action=answerPoll">
 				<div class="modal-body">
 					<?php foreach($poll['questions'] as $currentQuestion) { ?>
-					<div class="questions">
-						<div class="question" align="left">
-							<div class="question-text form-group-lg">
+					<div>
+						<div align="left">
+							<div class="form-group-lg">
 								<label><?=$currentQuestion['question'];?></label>
 							</div>
-							<div class="question-option form-group-sm">
+							<div class="form-group-sm">
 								<?php foreach($currentQuestion['options'] as $currentOption) { ?>
 								<div class="radio">
 		  							<label><input type="radio" name="optradio"><?= $currentQuestion['question']; ?></label>

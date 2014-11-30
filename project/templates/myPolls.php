@@ -24,7 +24,6 @@
 
 				<div class="row placeholders">
 					<?php foreach ($polls as $currentPoll) { ?>
-					<?php include 'templates/viewPoll.php'; ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
 						<a href="" class="btn btn-lg" data-toggle="modal" data-target="#viewPollModal" >
 							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -34,6 +33,7 @@
 							<?= "by ".$currentPoll['author']; ?>
 						</span>
 					</div>
+					<?php include 'templates/viewPoll.php'; ?>
 					<?php } ?>
 				</div>
 			</div>
