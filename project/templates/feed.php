@@ -11,10 +11,10 @@
 				<h1 class="page-header">Feed</h1>
 
 				<div class="row placeholders">
-					<?php foreach ($reversePolls as $currentPoll) { ?>
-					<?php include 'templates/viewPoll.php'; ?>
+					<?php $reverseMyPolls = array_reverse($polls); ?>
+					<?php foreach ($reverseMyPolls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<a href="" class="btn btn-lg" data-toggle="modal" data-target="#viewPollModal" >
+						<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=Feed"; ?> id="modal-view" class="btn btn-lg">
 							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						</a>
 						<h4><?= $currentPoll['title']; ?></h4>
