@@ -11,7 +11,7 @@
 				</h4>
 			</div>
 
-			<form class="form-edit-username" role="form" action="actions.php?action=editUsername" method="POST">
+			<form class="form-edit-profile-pic" role="form" action="actions.php?action=editProfilePic" method="POST">
 				<div class="modal-body">
 					<div id="progress" class="progress">
 						<div class="progress-bar progress-bar-success"></div>
