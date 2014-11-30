@@ -14,15 +14,17 @@
 
 		$idCategory = $_POST["inputCategory"];
 		/*$image = $_POST["image"]; */
+		$title = $_POST["title"];
 		
 		$stmt = $dbh->prepare(
 			'INSERT INTO Poll
-			(idUser, isPublic, anyoneCanAddOptions, image, idCategory)
-			VALUES (?,?,?,?,?)');
+			(idUser, isPublic, anyoneCanAddOptions, title, image, idCategory)
+			VALUES (?,?,?,?,?,?)');
 		$stmt->execute(array(
 			$_SESSION['idUser'],
 			$isPublic,
 			$anyoneCanAddOptions,
+			$title,
 			$image,
 			$idCategory));
 

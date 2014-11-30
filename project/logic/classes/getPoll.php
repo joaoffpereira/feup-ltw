@@ -2,9 +2,6 @@
 	include_once("connection.php");
 
 	try {
-
-
-
 		$stmt = $dbh->prepare(
 			'SELECT * FROM Poll
 			WHERE idPoll = ?');

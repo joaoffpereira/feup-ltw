@@ -5,8 +5,6 @@
 	<?php include 'navbar.php'; ?>
 	<?php include 'logic/classes/getMyPolls.php';?>
 	
-	<a href="actions.php?action=myPolls">get it</a>
-
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-12 main">
@@ -30,7 +28,7 @@
 							<a href= <?= "templates/viewPoll.php?id=".$currentPoll['idPoll'];?> > 
 								<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 							</a>
-							<h4>What is the best band of all time?</h4>
+							<h4> <?= $currentPoll['title']; ?> </h4>
 							<span class="text-muted"> <?= "by ".$currentPoll['author']; ?> </span>
  						</div>
 					<?php } ?>
