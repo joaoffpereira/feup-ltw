@@ -17,6 +17,10 @@
 			include 'logic/classes/addPoll.php';
 			break;
 
+		case 'editProfilePic':
+			include 'logic/classes/editProfilePic.php';
+			break;
+
 		case 'editUsername':
 			include 'logic/classes/editUsername.php';
 			break;
