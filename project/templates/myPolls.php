@@ -3,6 +3,7 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
+	<?php include 'logic/classes/getMyPolls.php';?>
 	
 	<a href="actions.php?action=myPolls">get it</a>
 
@@ -24,16 +25,15 @@
 				</div>
 
 				<div class="row placeholders">
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>What is the best band of all time?</h4>
-						<span class="text-muted">by Henrique Ferrolho</span>
-					</div>
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Who is the last character to die in Game of Thrones?</h4>
-						<span class="text-muted">by Henrique Ferrolho</span>
-					</div>
+					<?php foreach ($polls as $currentPoll) { ?>
+						<div class="col-xs-12 col-sm-3 placeholder">
+							<a href= <?= "templates/viewPoll.php?id=".$currentPoll['idPoll'];?> > 
+								<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
+							</a>
+							<h4>What is the best band of all time?</h4>
+							<span class="text-muted"> <?= "by ".$currentPoll['author']; ?> </span>
+ 						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

@@ -13,7 +13,7 @@
 
 		foreach ($questions as &$currentQuestion) {
 			$idQuestion = $currentQuestion['idQuestion'];
-			include("getMyOptions.php");
+			include("getQuestionOptions.php");
 			$currentQuestion['options'] = $options;
 		}
 

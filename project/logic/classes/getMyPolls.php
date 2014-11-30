@@ -10,14 +10,14 @@
 			$_SESSION['idUser']));
 
 
-		$polls = $stmt->fetchAll();
+		$allPolls = $stmt->fetchAll();
 
-		foreach ($polls as &$currentPoll) {
-			$idPoll = $currentPoll['idPoll'];
+		foreach ($allPolls as &$poll) {
+			$idPoll = $poll['idPoll'];
 			
-			include("getMyQuestions.php");
+			include("getPoll.php");
 
-			$currentPoll['questions'] = $questions;
+			$polls[] = $poll;
 		}
 
 	} catch(PDOException $e) {

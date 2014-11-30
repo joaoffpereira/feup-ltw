@@ -11,6 +11,9 @@
 	  		<form id="questions" method="POST" action="actions.php?action=addPoll">
 				<div class="modal-body">
 					<div class="poll-details row">
+						<div class="question-text form-group-lg col-xs-12 col-sm-12">
+							<input type="text" class="form-control input_question" name="title" size="100" placeholder="Title" autofocus required>
+						</div>
 						<input type="hidden" id="category" name="inputCategory" value="">
 						<div class="add-poll-modal-dropdown col-xs-6 col-sm-3 btn-group">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
