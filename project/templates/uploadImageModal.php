@@ -14,7 +14,7 @@
 			<form class="form-edit-profile-pic" role="form" action="actions.php?action=editProfilePic" method="POST">
 				<div class="modal-body">
 					<div id="progress" class="progress">
-						<div class="progress-bar progress-bar-success"></div>
+						<div class="progress-bar progress-bar-info progress-bar-striped"></div>
 					</div>
 
 					<div class="container-fluid">
