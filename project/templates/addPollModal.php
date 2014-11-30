@@ -45,7 +45,7 @@
 							</div>
 
 							<div class="question-option form-group-sm">
-								<input type="text" number="1" class="form-control input_option" name="option1-1" size="100" placeholder="Add an option...">
+								<input type="text" number="1" class="form-control input_option" name="option1-1" size="100" placeholder="Add an option..." required>
 							</div>
 						</div>
 					</div>

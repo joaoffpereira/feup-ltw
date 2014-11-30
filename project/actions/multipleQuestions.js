@@ -19,12 +19,14 @@ $(function() {
 		myClone.find('.input_question').attr({
 			'number': question_number,
 			'name': 'question' + question_number,
-			'placeholder': 'Ask something...'
+			'placeholder': 'Ask something...',
+			'required': false
 		});
 
 		myClone.find('.input_option').attr({
 			'name': 'option' + question_number + '-1',
-			'placeholder': 'Add an option...'
+			'placeholder': 'Add an option...',
+			'required': false
 		}).bind('focus', function() {
 			bindOption($(this), question_number);
 		});
@@ -44,7 +46,8 @@ $(function() {
 		myLi.find('input').attr({
 			'number': option_number,
 			'name': 'option' + question_number + '-' + option_number,
-			'placeholder': 'Add an option...'
+			'placeholder': 'Add an option...',
+			'required': false
 		});
 
 		myOption.parent().parent().append(myLi);
