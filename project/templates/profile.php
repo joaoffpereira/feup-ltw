@@ -13,10 +13,8 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-2 profile-pic">
-						<img id="currentImage" src="assets/img/blank-profile.png" class="img-responsive" alt="Blank profile picture">
-						<div class="newImageBox">
-							<input id="profile-image-upload" class="hidden" type="file">
-						</div>
+						<img id="currentImage" src="assets/img/blank-profile.png" class="img-responsive" alt="Blank profile picture"  data-toggle="modal" data-target="#uploadImageModal">
+						<?php include 'uploadImageModal.php'; ?>
 					</div>
 
 					<div class="col-xs-12 col-sm-2">
