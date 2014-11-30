@@ -18,6 +18,7 @@ CREATE TABLE Poll (
 	idUser INTEGER NOT NULL,
 	isPublic INTEGER,
 	anyoneCanAddOptions INTEGER,
+	title VARCHAR2(100),
 	image VARCHAR2(255),
 	idCategory INTEGER NOT NULL
 );
