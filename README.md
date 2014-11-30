@@ -18,8 +18,8 @@ A web application where users can create, share, and manage polls.
 - [ ] Code should be organized and and consistent.
 
 ##Suggested extra requirements:
-- [ ] Poll owners should be able to decide if the poll is public or private;
+- [x] Poll owners should be able to decide if the poll is public or private;
 - [ ] Private polls should not appear in listings or searches. Only the poll URL should needed to access it;
-- [ ] Polls with more than one question;
+- [x] Polls with more than one question;
 - [ ] Poll results with graphs or charts;
 - [ ] Possibility to share a poll using email or a social network.

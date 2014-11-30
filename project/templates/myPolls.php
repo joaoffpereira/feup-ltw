@@ -34,6 +34,7 @@
 							<?= "by ".$currentPoll['author']; ?>
 						</span>
 					</div>
+					<?php include 'templates/viewPoll.php'; ?>
 					<?php } ?>
 				</div>
 			</div>

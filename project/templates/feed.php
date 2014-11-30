@@ -3,6 +3,7 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
+	<?php include 'logic/classes/getFeedPolls.php'; ?>
 
 	<div class="container-fluid">
 		<div class="row">
@@ -10,43 +11,18 @@
 				<h1 class="page-header">Feed</h1>
 
 				<div class="row placeholders">
+					<?php foreach ($reversePolls as $currentPoll) { ?>
+					<?php include 'templates/viewPoll.php'; ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>What is the best band of all time?</h4>
-						<span class="text-muted">by Henrique Ferrolho</span>
+						<a href="" class="btn btn-lg" data-toggle="modal" data-target="#viewPollModal" >
+							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
+						</a>
+						<h4><?= $currentPoll['title']; ?></h4>
+						<span class="text-muted">
+							<?= "by ".$currentPoll['author']; ?>
+						</span>
 					</div>
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>How many eggs have we eaten this week?</h4>
-						<span class="text-muted">by João Pereira</span>
-					</div>
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Which is the best: C++ or Java?</h4>
-						<span class="text-muted">by André Pires</span>
-					</div>
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Who is the last character to die in Game of Thrones?</h4>
-						<span class="text-muted">by Henrique Ferrolho</span>
-					</div>
-				</div>
-				<div class="row placeholders">
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>What is the best band of all time?</h4>
-						<span class="text-muted">by Henrique Ferrolho</span>
-					</div>
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>How many eggs have we eaten this week?</h4>
-						<span class="text-muted">by João Pereira</span>
-					</div>
-					<div class="col-xs-12 col-sm-3 placeholder">
-						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						<h4>Which is the best: C++ or Java?</h4>
-						<span class="text-muted">by André Pires</span>
-					</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
