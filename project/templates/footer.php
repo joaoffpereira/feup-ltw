@@ -16,6 +16,7 @@
 	<script src="actions/formDropdownButton.js"></script>
 	<script src="actions/multipleQuestions.js"></script>
 	<script src="actions/fileUpload.js"></script>
+	<script src="actions/updatePollID.js"></script>
 	
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
