@@ -2,6 +2,20 @@
 include_once("connection.php");
 
 try {
+	$doc = new DOMDocument();
+	@$doc->loadHTML('templates/uploadImageModal.php');
+	var_dump($doc);
+	$p = $doc->getElementById('files')->getElementsByTagName('p')->item(0);
+	
+	echo $p->nodeValue;
+	echo 'teste';
+	echo "
+	<script type=\"text/javascript\">
+		window.alert('$p->nodeValue');
+		window.location.href = 'index.php?page=profile';
+	</script>";
+	break;
+
 	$currentUsername = $_SESSION['username'];
 	$newUsername = $_POST["newUsername"];
 
