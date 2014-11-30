@@ -30,11 +30,11 @@
 						</div>
 
 						<div class="add-poll-modal-checkbox col-xs-6 col-sm-3">
-							<label><input type="checkbox" name="isPublic"> Private</label>
+							<label><input type="checkbox" id="isPrivate" name="isPrivate" value="No"> Private</label>
 						</div>
 
 						<div class="add-poll-modal-checkbox col-xs-12 col-sm-6">
-							<label><input type="checkbox" name="anyoneCanAddOptions"> Allow anyone to add options</label>
+							<label><input type="checkbox" id="anyoneCanAddOptions" name="anyoneCanAddOptions" value="No"> Allow anyone to add options</label>
 						</div>
 					</div>
 
