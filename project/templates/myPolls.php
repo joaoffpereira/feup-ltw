@@ -23,9 +23,11 @@
 				</div>
 
 				<div class="row placeholders">
-					<?php foreach ($polls as $currentPoll) { ?>
+					<?php $reverseMyPolls = array_reverse($polls); ?>
+					<?php foreach ($reverseMyPolls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<a href="" class="btn btn-lg" data-toggle="modal" data-target="#viewPollModal" >
+						<?php include 'templates/viewPoll.php' ?>
+						<a href="" id="modal-view" class="btn btn-lg" data-book-id="modalID" data-toggle="modal" data-target="#viewPollModal" >
 							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
 						</a>
 						<h4><?= $currentPoll['title']; ?></h4>

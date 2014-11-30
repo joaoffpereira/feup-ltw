@@ -41,11 +41,11 @@
 					<div class="questions">
 						<div class="question" align="left">
 							<div class="question-text form-group-lg">
-								<input type="text" class="form-control input_question" number="1" name="question1" size="100" placeholder="Ask something..." autofocus> <!--required missing-->
+								<input type="text" class="form-control input_question" number="1" name="question1" size="100" placeholder="Ask something..." autofocus required>
 							</div>
 
 							<div class="question-option form-group-sm">
-								<input type="text" number="1" class="form-control input_option" name="option1-1" size="100" placeholder="Add an option..."> <!--required="true"-->
+								<input type="text" number="1" class="form-control input_option" name="option1-1" size="100" placeholder="Add an option..." required>
 							</div>
 						</div>
 					</div>

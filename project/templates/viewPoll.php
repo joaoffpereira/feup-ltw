@@ -1,6 +1,4 @@
-<?php 
-	include 'logic/classes/getPoll.php'; 
-?>
+<?php include 'templates/getPoll.php'; ?>
 
 <div class="modal fade" id="viewPollModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
