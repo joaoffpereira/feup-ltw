@@ -24,26 +24,37 @@
 
 						<div class="row placeholders">
 							<div class="modal-body">
-								<?php
-									foreach($poll['questions'] as &$currentQuestion): ?>
-								<div>
+									<?php
+										$i=0;
+										foreach($poll['questions'] as &$currentQuestion): ?>
 									<div align="left">
-										<div class="form-group-lg">
-											<h4><?=$currentQuestion['question'] ?></h4>
-										</div>
-										<div class="form-group-sm">
-											<?php foreach($currentQuestion['options'] as $currentOption): ?>
-											<div>
-				  								<p>
-				  									<?=$currentOption['counter']." - ".$currentOption['option'] ?>
-				  								</p>
+										<div>
+											<div class="form-group-lg">
+												<label><?=$currentQuestion['question'] ?></label>
 											</div>
-											<?php endforeach; ?>
+											<div class="form-group-sm">
+												<?php foreach($currentQuestion['options'] as $currentOption): ?>
+												<div class="radio">
+					  								<label>
+					  								<?php if($selectedOpt[$i] === $currentOption['idOption']) { ?>
+					  								<input type="radio" checked name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
+					  									<?=$currentOption['option'] ?>
+					  								<?php } 
+					  									else { ?>
+					  								<input type="radio" disabled name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
+					  									<?=$currentOption['option'] ?>
+					  									<?php } ?>
+					  								<label align="right">
+					  								<?=$currentOption['counter'] ?>
+					  								</label>
+					  								</label>
+												</div>
+												<?php endforeach; ?>
+											</div>
 										</div>
 									</div>
+									<?php $i++; endforeach; ?>
 								</div>
-								<?php endforeach; ?>
-							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
 							</div>
