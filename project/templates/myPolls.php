@@ -26,9 +26,15 @@
 					<?php $reverseMyPolls = array_reverse($polls); ?>
 					<?php foreach ($reverseMyPolls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=My+polls"; ?> id="modal-view">
-							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						</a>
+						<div>
+							<a id="my-poll-delete-btn" href=<?="actions.php?action=deletePoll&id=".$currentPoll['idPoll']?> >
+								<i class="glyphicon glyphicon-remove"></i>
+							</a>
+
+							<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=My+polls"; ?> id="modal-view">
+								<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
+							</a>
+						</div>
 						
 						<h4><?= $currentPoll['title']; ?></h4>
 						<span class="text-muted">
