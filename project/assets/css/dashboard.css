@@ -104,10 +104,14 @@ body {
 	margin-bottom: 15px;
 }
 .question-text {
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 .question-option {
 	margin-top: -1px;
+}
+#poll-question {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
 }
 
 /*
