@@ -32,6 +32,10 @@
 		case 'myPolls': 
 			include 'logic/classes/getMyPolls.php';
 			break;
+
+		case 'answerPoll':
+			include 'logic/classes/answerPoll.php';
+			break;
 		
 		default:
 			break;

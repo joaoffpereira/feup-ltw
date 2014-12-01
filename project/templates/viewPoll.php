@@ -38,7 +38,9 @@
 											<div class="form-group-sm">
 												<?php foreach($currentQuestion['options'] as $currentOption): ?>
 												<div class="radio">
-				  								<label><input type="radio" name="optradio"><?=$currentOption['option'] ?></label>
+				  								<label><input type="radio" name=<?="".$currentQuestion['idQuestion'] ?> value=<?="".$currentOption['idOption'] ?>>
+				  									<?=$currentOption['option'] ?>
+				  								</label>
 												</div>
 												<?php endforeach; ?>
 											</div>
