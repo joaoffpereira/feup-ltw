@@ -4,7 +4,7 @@
 	try {
 
 		$stmt = $dbh->prepare(
-			'SELECT option FROM Option
+			'SELECT * FROM Option
 			WHERE idQuestion = ?');
 		$stmt->execute(array($idQuestion));
 

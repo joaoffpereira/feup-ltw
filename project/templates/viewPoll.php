@@ -29,6 +29,7 @@
 							<form id="answerPoll" method="POST" action="actions.php?action=answerPoll">
 								<div class="modal-body">
 									<?php
+										$i=0;
 										foreach($poll['questions'] as &$currentQuestion): ?>
 									<div>
 										<div align="left">
@@ -38,15 +39,15 @@
 											<div class="form-group-sm">
 												<?php foreach($currentQuestion['options'] as $currentOption): ?>
 												<div class="radio">
-				  								<label><input type="radio" name=<?="".$currentQuestion['idQuestion'] ?> value=<?="".$currentOption['idOption'] ?>>
-				  									<?=$currentOption['option'] ?>
-				  								</label>
+					  								<label><input type="radio" name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
+					  									<?=$currentOption['option'] ?>
+					  								</label>
 												</div>
 												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
-									<?php endforeach; ?>
+									<?php $i++; endforeach; ?>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
