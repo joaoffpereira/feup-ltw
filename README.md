@@ -5,8 +5,9 @@ A web application where users can create, share, and manage polls.
 
 #How to access the web site:
 Follow one of the links below:  
+http://gnomo.fe.up.pt/~ei12023/pollhub  
+http://gnomo.fe.up.pt/~ei12058/pollhub  
 http://gnomo.fe.up.pt/~ei12079/pollhub  
-http://gnomo.fe.up.pt/~ei12023  
 
 #Requirements
 ##Minimum expected requirements:
