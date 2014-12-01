@@ -5,7 +5,8 @@
 
 		$stmt = $dbh->prepare(
 			'SELECT * FROM Poll
-			WHERE idUser = ?');
+			WHERE idUser = ?
+			ORDER BY idPoll DESC');
 		$stmt->execute(array(
 			$_SESSION['idUser']));
 

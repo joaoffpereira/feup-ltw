@@ -11,8 +11,7 @@
 				<h1 class="page-header">Feed</h1>
 
 				<div class="row placeholders">
-					<?php $reverseMyPolls = array_reverse($polls); ?>
-					<?php foreach ($reverseMyPolls as $currentPoll) { ?>
+					<?php foreach ($polls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
 						<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=Feed"; ?> id="modal-view">
 							<img href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=Feed"; ?> id="modal-view" src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">

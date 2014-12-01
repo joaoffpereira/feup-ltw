@@ -23,8 +23,7 @@
 				</div>
 
 				<div class="row placeholders">
-					<?php $reverseMyPolls = array_reverse($polls); ?>
-					<?php foreach ($reverseMyPolls as $currentPoll) { ?>
+					<?php foreach ($polls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
 						<div>
 							<a id="my-poll-delete-btn" href=<?="actions.php?action=deletePoll&id=".$currentPoll['idPoll']?> >

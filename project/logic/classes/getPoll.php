@@ -9,6 +9,13 @@
 
 		$poll = $stmt->fetch();
 
+		$stmt = $dbh->prepare(
+			'SELECT category FROM Category
+			WHERE idCategory = ?');
+		$stmt->execute(array($poll['idCategory']));
+
+		$poll['category'] = $stmt->fetch()['category'];
+
 		$getuser = $dbh->prepare(
 			'SELECT username FROM User
 			WHERE idUser = ?');

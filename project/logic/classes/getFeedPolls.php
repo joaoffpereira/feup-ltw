@@ -5,7 +5,8 @@
 
 		$stmt = $dbh->prepare(
 			'SELECT * FROM Poll
-			WHERE isPrivate = 0');
+			WHERE isPrivate = 0
+			ORDER BY idPoll DESC');
 		$stmt->execute();
 
 		$allPolls = $stmt->fetchAll();
@@ -17,8 +18,6 @@
 
 			$polls[] = $poll;
 		}
-
-		$reversePolls = array_reverse($polls);
 
 	} catch(PDOException $e) {
 		echo $e->getMessage();

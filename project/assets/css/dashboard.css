@@ -113,6 +113,10 @@ body {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 15px;
 }
+#poll-question:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
 
 /*
 * vertical align for bootstrap rows
