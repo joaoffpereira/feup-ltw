@@ -145,7 +145,7 @@ body {
 }
 #fileinput-button-subtitle {
 	margin: 0;
-	padding: 5px 0 0 0;
+	padding: 5px 0 0 5px;
 }
 .files {
 	margin-top: 7px;
