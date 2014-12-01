@@ -21,6 +21,7 @@
 
 				if($answered) {
 					$counterx++;
+					$selectedOpt[] = $opt['idOption'];
 					break;
 				}
 			}
