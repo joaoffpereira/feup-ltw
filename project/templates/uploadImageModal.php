@@ -18,12 +18,18 @@
 
 				<div class="container-fluid">
 					<div class="row">
-						<span class="btn btn-success fileinput-button col-xs-12 col-sm-3">
-							<i class="glyphicon glyphicon-plus"></i>
-							<span>Select files</span>
-							<!-- The file input field used as target for the file upload widget -->
-							<input id="fileupload" type="file" name="files[]">
-						</span>
+						<div class="col-xs-12 col-sm-3">
+						<div class="row">
+							<span class="btn btn-success fileinput-button col-xs-12 col-sm-12">
+								<i class="glyphicon glyphicon-plus"></i>
+								<span>Select files</span>
+								<!-- The file input field used as target for the file upload widget -->
+								<input id="fileupload" type="file" name="files[]">
+							</span>
+
+							<p id="fileinput-button-subtitle" class="col-xs-12 col-sm-12">or drag file to here</p>
+						</div>
+						</div>
 
 						<div id="files" class="files col-xs-12 col-sm-9"></div>
 					</div>

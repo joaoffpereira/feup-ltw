@@ -143,6 +143,10 @@ body {
 		height: 100%;
 	}
 }
+#fileinput-button-subtitle {
+	margin: 0;
+	padding: 5px 0 0 0;
+}
 .files {
 	margin-top: 7px;
 }
