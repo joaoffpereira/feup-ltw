@@ -20,6 +20,7 @@
 								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 							</button>
 							<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
+							<h4 class="modal-category" id="myModalCategory"> <?= $poll['category'] ?></h4>
 						</div>
 
 						<form id="answerPoll" method="POST" action=<?="actions.php?action=answerPoll&id=".$idPoll ?> >
