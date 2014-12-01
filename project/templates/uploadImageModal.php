@@ -27,7 +27,7 @@
 									<input id="fileupload" type="file" name="files[]">
 								</span>
 
-								<p id="fileinput-button-subtitle" class="col-xs-12 col-sm-12">or drag file to here</p>
+								<p id="fileinput-button-subtitle" class="col-xs-12 col-sm-12">or drop file here</p>
 							</div>
 						</div>
 
