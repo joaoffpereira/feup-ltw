@@ -45,6 +45,14 @@ switch ($currentPage) {
 	include 'logic/classes/signOut.php';
 	break;
 
+	case 'viewPoll':
+	include 'templates/viewPoll.php';
+	break;
+
+	case 'search':
+	include 'templates/searchResults.php';
+	break;
+	
 	default:
 	include 'templates/signIn.php';
 	break;
