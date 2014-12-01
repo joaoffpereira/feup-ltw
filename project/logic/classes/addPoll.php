@@ -31,7 +31,8 @@
 
 		for($i=1; isset($_POST[$questionN]); $i++, $questionN = 'question'.$i) {
 			$question = $_POST[$questionN];
-			include("addQuestion.php");
+			if($question !== "")
+				include("addQuestion.php");
 		}
 
 	} catch(PDOException $e) {

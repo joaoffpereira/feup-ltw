@@ -2,7 +2,8 @@
 	$idPoll = $_GET['id'];
 	$previousPage = urldecode($_GET['previous']);
 	include 'templates/navbar.php';
-	include 'logic/classes/getPoll.php'; 
+	include 'logic/classes/getPoll.php';
+
 ?>
 	<link href="assets/css/dashboard.css" rel="stylesheet">
 </head>
@@ -21,28 +22,29 @@
 							<button type="button" class="close" data-dismiss="modal">
 								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 							</button>
-							<h3 class="modal-title" id="myModalLabel"> <?= $poll['title']; ?> </h3>
+							<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
 						</div>
 
 						<div class="row placeholders">
 							<form id="answerPoll" method="POST" action="actions.php?action=answerPoll">
 								<div class="modal-body">
-									<?php foreach($poll['questions'] as $currentQuestion) { ?>
+									<?php
+										foreach($poll['questions'] as &$currentQuestion): ?>
 									<div>
 										<div align="left">
 											<div class="form-group-lg">
-												<label><?=$currentQuestion['question'];?></label>
+												<label><?=$currentQuestion['question'] ?></label>
 											</div>
 											<div class="form-group-sm">
-												<?php foreach($currentQuestion['options'] as $currentOption) { ?>
+												<?php foreach($currentQuestion['options'] as $currentOption): ?>
 												<div class="radio">
-				  								<label><input type="radio" name="optradio"><?= $currentOption['option']; ?></label>
+				  								<label><input type="radio" name="optradio"><?=$currentOption['option'] ?></label>
 												</div>
-												<?php } ?>
+												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
-									<?php } ?>
+									<?php endforeach; ?>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
