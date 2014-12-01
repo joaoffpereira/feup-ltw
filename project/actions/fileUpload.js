@@ -9,6 +9,7 @@ $(function () {
 		dataType: 'json',
 		done: function (e, data) {
 			$.each(data.result.files, function(index, file) {
+				$('#files p').remove();
 				$('<p/>').text(file.name).appendTo('#files');
 			});
 		},

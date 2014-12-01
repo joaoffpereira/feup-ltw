@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -22,3 +21,5 @@
 
 		<!-- Custom styles for this template -->
 		<link href="assets/css/footer.css" rel="stylesheet">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -1,5 +1,7 @@
 <?php
-include 'templates/header.php';
+require_once realpath(dirname(__FILE__) . "/config.php");
+
+include TEMPLATES_PATH . '/header.php';
 
 $currentPage = $_GET['page'];
 

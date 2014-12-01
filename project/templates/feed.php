@@ -14,9 +14,8 @@
 					<?php foreach ($reversePolls as $currentPoll) { ?>
 					<?php include 'templates/viewPoll.php'; ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<a href="" class="btn btn-lg" data-toggle="modal" data-target="#viewPollModal" >
-							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						</a>
+						<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail" data-toggle="modal" data-target="#viewPollModal">
+						
 						<h4><?= $currentPoll['title']; ?></h4>
 						<span class="text-muted">
 							<?= "by ".$currentPoll['author']; ?>
