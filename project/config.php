@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-// EDIT THIS FOR SERVER URL
 defined("HOME_URL")
-or define("HOME_URL", "http://localhost/feup-ltw/project");
+or define("HOME_URL", dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']));
 
 defined("UPLOADS_URL")
 or define("UPLOADS_URL", HOME_URL . "/server/php/files");
