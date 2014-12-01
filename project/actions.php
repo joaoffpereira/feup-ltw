@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	require_once 'config.php';
+
 	switch ($_GET[action]) {
 		case 'signUp':
 			include 'logic/classes/signUp.php';

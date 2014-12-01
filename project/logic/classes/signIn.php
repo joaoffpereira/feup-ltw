@@ -24,6 +24,7 @@ try {
 
 	$_SESSION['idUser'] = $user['idUser'];
 	$_SESSION['username'] = $username;
+	$_SESSION['image'] = $user['image'];
 
 	$stmt = $dbh->prepare(
 		'UPDATE User

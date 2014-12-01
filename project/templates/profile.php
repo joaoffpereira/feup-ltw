@@ -13,7 +13,7 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-2 profile-pic">
-						<img id="currentImage" src="assets/img/blank-profile.png" class="img-responsive" alt="Blank profile picture"  data-toggle="modal" data-target="#uploadImageModal">
+						<img id="currentImage" src="<?= isset($_SESSION['image']) ? UPLOADS_URL . "/" . $_SESSION['image'] : 'assets/img/blank-profile.png' ?>" class="img-responsive" alt="Blank profile picture"  data-toggle="modal" data-target="#uploadImageModal">
 						<?php include 'uploadImageModal.php'; ?>
 					</div>
 
@@ -93,13 +93,3 @@
 			</div>
 		</div>
 	</div>
-
-<!-- NOT WORKING YET -
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-jQuery(document).ready(function($) {
-	$('#currentImage').click(function() {
-		$('.newImageBox').click();
-	});
-});
-</script>-->
