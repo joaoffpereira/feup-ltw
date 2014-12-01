@@ -14,7 +14,6 @@
 	<script type="text/javascript" src="actions/formDropdownButton.js"></script>
 	<script type="text/javascript" src="actions/multipleQuestions.js"></script>
 	<script type="text/javascript" src="actions/fileUpload.js"></script>
-	<script type="text/javascript" src="actions/updatePollID.js"></script>
 	<script type="text/javascript" src="actions/openViewPollModal.js"></script>
 	
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -1,9 +1,6 @@
 <?php 
-	$idPoll = $_GET['id'];
 	$previousPage = urldecode($_GET['previous']);
 	include 'templates/navbar.php';
-	include 'logic/classes/getPoll.php';
-
 ?>
 	<link href="assets/css/dashboard.css" rel="stylesheet">
 </head>
@@ -25,8 +22,8 @@
 							<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
 						</div>
 
+						<form id="answerPoll" method="POST" action=<?="actions.php?action=answerPoll&id=".$idPoll ?> >
 						<div class="row placeholders">
-							<form id="answerPoll" method="POST" action="actions.php?action=answerPoll">
 								<div class="modal-body">
 									<?php
 										$i=0;

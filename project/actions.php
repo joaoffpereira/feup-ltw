@@ -35,6 +35,7 @@
 			break;
 
 		case 'answerPoll':
+			$idPoll = $_GET['id'];
 			include 'logic/classes/answerPoll.php';
 			break;
 		

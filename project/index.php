@@ -41,12 +41,20 @@ switch ($currentPage) {
 	include 'templates/profile.php';
 	break;
 
-	case 'signOut':
-	include 'logic/classes/signOut.php';
+	case 'viewPoll':
+	
+	$idPoll = $_GET['id'];
+	include 'logic/classes/pollResults.php';
+
+	if(!$answered)
+		include 'templates/viewPoll.php';
+	else include 'templates/viewPollResults.php';
 	break;
 
-	case 'viewPoll':
-	include 'templates/viewPoll.php';
+	case 'viewPollResults':
+	$idPoll = $_GET['id'];
+	include 'logic/classes/getPoll.php';
+	include 'templates/viewPollResults.php';
 	break;
 
 	case 'search':

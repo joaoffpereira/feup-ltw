@@ -2,6 +2,7 @@
 	include_once("connection.php");
 
 	try {
+
 		for($j=0; isset($_POST[$j]); $j++) {
 		$idOption = $_POST[$j];
 
@@ -22,4 +23,6 @@
 	} catch(PDOException $e) {
 		echo $e->getMessage();
 	}
+
+	header("Location: index.php?page=viewPollResults&id=".$idPoll);
 ?>
