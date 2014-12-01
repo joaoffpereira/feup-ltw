@@ -16,8 +16,8 @@
 				<li><a href="index.php?page=profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 				<li><a href="actions.php?action=signOut"><span class="glyphicon glyphicon-log-out"></span> Sign out</a></li>
 			</ul>
-			<form class="navbar-form navbar-right">
-				<input type="text" class="form-control" placeholder="Search...">
+			<form class="navbar-form navbar-right" method="POST" action="index.php?page=search">
+				<input type="text" class="form-control" placeholder="Search..." name="searchInput">
 			</form>
 		</div>
 	</div>
