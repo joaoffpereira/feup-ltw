@@ -11,8 +11,8 @@ A web application where users can create, share, and manage polls.
 - [ ] Registered users should be able to manage their polls;
 - [ ] Polls should contain one image and several possible answers;
 - [ ] Users should be able to list, search and answer to polls;
-- [ ] One user should not be able to answer twice to the same poll;
-- [ ] Poll owners and users that already answered a poll, should be able to see the poll results;
+- [x] One user should not be able to answer twice to the same poll;
+- [x] Poll owners and users that already answered a poll, should be able to see the poll results;
 - [x] The following technologies should all be used: HTML, CSS, PHP, Javascript (by means of jQuery), Ajax/JSON, PDO/SQL (using sqlite);
 - [ ] The web site should be as secure as possible;
 - [ ] Code should be organized and and consistent.
