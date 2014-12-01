@@ -39,6 +39,11 @@
 			include 'logic/classes/answerPoll.php';
 			break;
 		
+		case 'deletePoll':
+			$idPoll = $_GET['id'];
+			include 'logic/classes/deletePoll.php';
+			break;	
+
 		default:
 			break;
 	}
