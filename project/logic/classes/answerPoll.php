@@ -3,8 +3,7 @@
 
 	try {
 		for($j=0; isset($_POST[$j]); $j++) {
-			$a = "".$j;
-		$idOption = $_POST[$a];
+		$idOption = $_POST[$j];
 
 		$stmt = $dbh->prepare(
 			'INSERT INTO UserOption
