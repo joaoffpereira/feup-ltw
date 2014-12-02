@@ -1,25 +1,25 @@
 <?php
-	include_once("connection.php");
+include_once("connection.php");
 
-	try {
+$polls = array();
 
-		$stmt = $dbh->prepare(
-			'SELECT * FROM Poll
-			WHERE isPrivate = 0
-			ORDER BY idPoll DESC');
-		$stmt->execute();
+try {
+	$stmt = $dbh->prepare(
+		'SELECT * FROM Poll
+		WHERE isPrivate = 0
+		ORDER BY idPoll DESC');
+	$stmt->execute();
 
-		$allPolls = $stmt->fetchAll();
+	$allPolls = $stmt->fetchAll();
 
-		foreach ($allPolls as &$poll) {
-			$idPoll = $poll['idPoll'];
-			
-			include("getPoll.php");
+	foreach ($allPolls as &$poll) {
+		$idPoll = $poll['idPoll'];
 
-			$polls[] = $poll;
-		}
+		include("getPoll.php");
 
-	} catch(PDOException $e) {
-		echo $e->getMessage();
+		array_push($polls, $poll);
 	}
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
 ?>
