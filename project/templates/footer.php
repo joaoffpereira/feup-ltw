@@ -6,6 +6,7 @@
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/frameworks/bootstrap/js/bootstrap-filestyle.js"></script>
 
 	<script type="text/javascript" src="assets/js/vendor/jquery.ui.widget.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.iframe-transport.js"></script>

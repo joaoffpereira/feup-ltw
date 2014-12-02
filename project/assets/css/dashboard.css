@@ -53,16 +53,25 @@ body {
 .placeholder {
 	margin-bottom: 20px;
 }
+.placeholder div {
+	height: 200px;
+	display: inline-block;
+	position: relative;
+}
+.placeholder div:hover #my-poll-delete-btn {
+	display: block;
+}
+.placeholder-align-helper {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 .placeholder img {
 	width: 200px;
 	display: inline-block;
 	border-radius: 5%;
 }
-.placeholder div {
-	display: inline-block;
-	position: relative;
-}
-.placeholder:hover img {
+.placeholder img:hover {
 	box-shadow: 0 0 1em gray;
 }
 #my-poll-delete-btn {
@@ -71,9 +80,6 @@ body {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-}
-.placeholder:hover #my-poll-delete-btn {
-	display: block;
 }
 
 .my-polls-header {
@@ -94,10 +100,8 @@ body {
 	margin-top: 5px;
 	margin-bottom: 17px;
 }
-#add-poll-image-ui {
-	margin-bottom: 15px;
-}
-#add-poll-image-ui #progress {
+#poll-pic-selection {
+	margin-top: 0;
 	margin-bottom: 15px;
 }
 

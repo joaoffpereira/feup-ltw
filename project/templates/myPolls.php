@@ -30,8 +30,9 @@
 								<i class="glyphicon glyphicon-remove"></i>
 							</a>
 
+							<span class="placeholder-align-helper"></span>
 							<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=My+polls"; ?> id="modal-view">
-								<img src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" class="img-responsive" alt="Generic placeholder thumbnail">
+								<img id="placeholder-img" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" class="img-responsive" alt="Generic placeholder thumbnail">
 							</a>
 						</div>
 						
