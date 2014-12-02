@@ -92,6 +92,12 @@ body {
 }
 .add-poll-modal-checkbox {
 	margin-top: 5px;
+	margin-bottom: 17px;
+}
+#add-poll-image-ui {
+	margin-bottom: 15px;
+}
+#add-poll-image-ui #progress {
 	margin-bottom: 15px;
 }
 

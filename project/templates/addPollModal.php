@@ -8,12 +8,13 @@
 				<h4 class="modal-title" id="myModalLabel">Add new poll</h4>
 			</div>
 
-	  		<form id="questions" method="POST" action="actions.php?action=addPoll">
+			<form id="questions" method="POST" action="actions.php?action=addPoll" enctype="multipart/form-data">
 				<div class="modal-body">
 					<div class="poll-details row">
 						<div class="question-text form-group-lg col-xs-12 col-sm-12">
 							<input type="text" class="form-control input_question" name="title" size="100" placeholder="Title" autofocus required>
 						</div>
+
 						<input type="hidden" id="category" name="inputCategory" value="">
 						<div class="add-poll-modal-dropdown col-xs-6 col-sm-3 btn-group">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -36,6 +37,8 @@
 						<div class="add-poll-modal-checkbox col-xs-12 col-sm-6">
 							<label><input type="checkbox" id="anyoneCanAddOptions" name="anyoneCanAddOptions" value="No"> Allow anyone to add options</label>
 						</div>
+
+						<input type="file" id="poll-pic-selection" name="poll-pic">
 					</div>
 
 					<div class="questions">

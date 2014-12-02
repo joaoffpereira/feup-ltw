@@ -1,44 +1,47 @@
 <?php
-	include_once("connection.php");
+include_once("connection.php");
 
-	try {
+try {
+	(isset($_POST['isPrivate']) && $_POST['isPrivate'] === 'No') ? $isPrivate = 1 : $isPrivate = 0;
 
-		(isset($_POST['isPrivate']) && $_POST['isPrivate'] === 'No') ? $isPrivate = 1 : $isPrivate = 0;
+	(isset($_POST['anyoneCanAddOptions']) && $_POST['anyoneCanAddOptions'] === 'No') 
+	? $anyoneCanAddOptions = 1 : $anyoneCanAddOptions = 0;
 
-		(isset($_POST['anyoneCanAddOptions']) && $_POST['anyoneCanAddOptions'] === 'No') 
-			? $anyoneCanAddOptions = 1 : $anyoneCanAddOptions = 0;
+	$idCategory = $_POST["inputCategory"];
 
+	if ($_FILES["poll-pic"]["name"] != '') {
+		$image = uniqid() . "-" . $_FILES["poll-pic"]["name"];
+		move_uploaded_file($_FILES["poll-pic"]["tmp_name"], UPLOADS_PATH . "/$image");
+	} else $image = '';
 
-		$idCategory = $_POST["inputCategory"];
-		/*$image = $_POST["image"]; */
-		$title = $_POST["title"];
-		
-		$stmt = $dbh->prepare(
-			'INSERT INTO Poll
-			(idUser, isPrivate, anyoneCanAddOptions, title, image, idCategory)
-			VALUES (?,?,?,?,?,?)');
-		$stmt->execute(array(
-			$_SESSION['idUser'],
-			$isPrivate,
-			$anyoneCanAddOptions,
-			$title,
-			$image,
-			$idCategory));
+	$title = $_POST["title"];
 
-		$idPoll = $dbh->lastInsertId();
-		
-		$questionN = 'question1';
+	$stmt = $dbh->prepare(
+		'INSERT INTO Poll
+		(idUser, isPrivate, anyoneCanAddOptions, title, image, idCategory)
+		VALUES (?,?,?,?,?,?)');
+	$stmt->execute(array(
+		$_SESSION['idUser'],
+		$isPrivate,
+		$anyoneCanAddOptions,
+		$title,
+		$image,
+		$idCategory));
 
-		for($i=1; isset($_POST[$questionN]); $i++, $questionN = 'question'.$i) {
-			$question = $_POST[$questionN];
-			if($question !== "")
-				include("addQuestion.php");
-		}
+	$idPoll = $dbh->lastInsertId();
 
-	} catch(PDOException $e) {
-		echo $e->getMessage();
+	$questionN = 'question1';
+
+	for($i=1; isset($_POST[$questionN]); $i++, $questionN = 'question'.$i) {
+		$question = $_POST[$questionN];
+		if($question !== "")
+			include("addQuestion.php");
 	}
 
-	header("Location: index.php?page=myPolls");
-	exit;
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
+
+header("Location: index.php?page=myPolls");
+exit;
 ?>
