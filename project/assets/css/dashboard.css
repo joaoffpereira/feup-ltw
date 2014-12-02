@@ -62,7 +62,7 @@ body {
 	display: inline-block;
 	position: relative;
 }
-.placeholder div:hover img {
+.placeholder:hover img {
 	box-shadow: 0 0 1em gray;
 }
 #my-poll-delete-btn {
@@ -72,7 +72,7 @@ body {
 	top: 10px;
 	right: 10px;
 }
-.placeholder div:hover #my-poll-delete-btn {
+.placeholder:hover #my-poll-delete-btn {
 	display: block;
 }
 
