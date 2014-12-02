@@ -4,9 +4,6 @@ include_once("connection.php");
 try {
 	(isset($_POST['isPrivate']) && $_POST['isPrivate'] === 'No') ? $isPrivate = 1 : $isPrivate = 0;
 
-	(isset($_POST['anyoneCanAddOptions']) && $_POST['anyoneCanAddOptions'] === 'No') 
-	? $anyoneCanAddOptions = 1 : $anyoneCanAddOptions = 0;
-
 	$idCategory = $_POST["inputCategory"];
 
 	if ($_FILES["poll-pic"]["name"] != '') {
@@ -18,12 +15,11 @@ try {
 
 	$stmt = $dbh->prepare(
 		'INSERT INTO Poll
-		(idUser, isPrivate, anyoneCanAddOptions, title, image, idCategory)
-		VALUES (?,?,?,?,?,?)');
+		(idUser, isPrivate, title, image, idCategory)
+		VALUES (?,?,?,?,?)');
 	$stmt->execute(array(
 		$_SESSION['idUser'],
 		$isPrivate,
-		$anyoneCanAddOptions,
 		$title,
 		$image,
 		$idCategory));

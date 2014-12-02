@@ -34,10 +34,6 @@
 							<label><input type="checkbox" id="isPrivate" name="isPrivate" value="No"> Private</label>
 						</div>
 
-						<div class="add-poll-modal-checkbox col-xs-12 col-sm-6">
-							<label><input type="checkbox" id="anyoneCanAddOptions" name="anyoneCanAddOptions" value="No"> Allow anyone to add options</label>
-						</div>
-
 						<div id="poll-pic-selection" class="col-xs-12 col-md-12">
 							<input type="file" name="poll-pic" class="filestyle" data-buttonBefore="true">
 						</div>
