@@ -175,3 +175,6 @@ body {
 .files p {
 	margin: 0;
 }
+#seeResultsBtn {
+	float: left;
+}
