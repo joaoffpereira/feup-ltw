@@ -3,7 +3,7 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
-	<?php include 'logic/classes/getMyPolls.php';?>
+	<?php include 'logic/classes/getMyPolls.php'; ?>
 	
 	<div class="container-fluid">
 		<div class="row">

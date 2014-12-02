@@ -37,7 +37,7 @@ include 'templates/navbar.php';
 												<?php foreach($currentQuestion['options'] as $currentOption): ?>
 													<div class="radio">
 														<label><input type="radio" name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
-															<?=$currentOption['option'] ?>
+															<p><?= $currentOption['option'] ?></p>
 														</label>
 													</div>
 												<?php endforeach; ?>
