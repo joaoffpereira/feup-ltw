@@ -9,7 +9,7 @@ include 'templates/navbar.php';
 		<div class="row">
 			<div class="col-sm-12 col-md-12 main">
 				<div class="my-polls-header page-header row">
-					<h1 class="my-polls-header-title pull-left"> <?= $previousPage; ?></h1>
+					<h1 class="my-polls-header-title pull-left" id="modalPreviousPage" value=<?= $previousPage; ?>> <?= $previousPage; ?></h1>
 				</div>
 
 				<div class="modal fade" id="viewPollModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
