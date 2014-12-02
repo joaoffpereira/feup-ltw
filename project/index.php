@@ -41,8 +41,7 @@ switch ($currentPage) {
 	include 'templates/profile.php';
 	break;
 
-	case 'viewPoll':
-	
+	case 'viewPoll':	
 	$idPoll = $_GET['id'];
 	include 'logic/classes/pollResults.php';
 

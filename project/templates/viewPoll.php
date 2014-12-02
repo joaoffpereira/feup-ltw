@@ -46,7 +46,9 @@ include 'templates/navbar.php';
 										<?php $i++; endforeach; ?>
 									</div>
 									<div class="modal-footer">
-										<button id="seeResultsBtn" class="btn btn-default" onclick=<?="location.href='index.php?page=viewPollResults&id".$idPoll ?>> See poll results</button>
+										<a href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".$previousPage ?>>
+											<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
+										</a>
 										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 										<button type="submit" class="btn btn-primary">Save changes</button>
 									</div>
