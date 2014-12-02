@@ -9,7 +9,7 @@
 			WHERE title like ? 
 			AND isPrivate = 0');
 		$stmt->execute(array(
-			$searchName."%"));
+			"%".$searchName."%"));
 	
 		$polls = $stmt->fetchAll();
 
