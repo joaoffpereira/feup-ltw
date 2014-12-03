@@ -25,7 +25,7 @@
 							</button>
 
 							<!-- Modal -->
-							<div class="modal fade" id="editUsernameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" id="editUsernameModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -38,7 +38,7 @@
 										<form class="form-edit-username" role="form" action="actions.php?action=editUsername" method="POST">
 											<div class="modal-body">
 												<div class="form-group">
-													<input type="text" class="form-control" name="newUsername" placeholder="New username" required>
+													<input type="text" class="form-control" name="newUsername" placeholder="New username" required autofocus>
 												</div>
 											</div>
 
@@ -59,7 +59,7 @@
 							</button>
 
 							<!-- Modal -->
-							<div class="modal fade" id="editPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" id="editPasswordModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -72,7 +72,7 @@
 										<form class="form-edit-password" role="form" action="actions.php?action=editPassword" method="POST">
 											<div class="modal-body">
 												<div class="form-group">
-													<input type="password" class="form-control" name="newPassword" placeholder="New password" required>
+													<input type="password" class="form-control" name="newPassword" placeholder="New password" required autofocus>
 												</div>
 												<div class="form-group">
 													<input type="password" class="form-control" name="newPasswordConfirmation" placeholder="Confirm new password" required>
@@ -95,10 +95,10 @@
 	</div>
 
 	<script type="text/javascript">
-	<?php
-	if($_SESSION['responseContent'] != '') {
-		echo "alert('".$_SESSION['responseContent']."');";
-		$_SESSION['responseContent'] = '';
-	}
-	?>
+		<?php
+		if($_SESSION['responseContent'] != '') {
+			echo "alert('".$_SESSION['responseContent']."');";
+			$_SESSION['responseContent'] = '';
+		}
+		?>
 	</script>

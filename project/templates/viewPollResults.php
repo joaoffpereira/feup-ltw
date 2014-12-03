@@ -20,7 +20,7 @@ include 'templates/navbar.php';
 									<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 								</button>
 								<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
-								<h4 class="modal-category" id="myModalCategory"> <?= $poll['category'] ?></h4>
+								<h4 id="viewPollModalCategory" class="modal-category"> <?= $poll['category'] ?></h4>
 							</div>
 
 							<div class="content-fluid">

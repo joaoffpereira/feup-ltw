@@ -2,16 +2,13 @@
 	include_once("connection.php");
 
 	try {
-		$image = $_POST["image"];
-
 		$stmt = $dbh->prepare(
 			'INSERT INTO Question
-			(idPoll, question, image)
-			VALUES (?,?,?)');
+			(idPoll, question)
+			VALUES (?, ?)');
 		$stmt->execute(array(
 			$idPoll,
-			$question,
-			$image));
+			$question));
 
 	$stmt = $dbh->prepare(
 		'SELECT MAX(idQuestion) AS lastId FROM Question');
