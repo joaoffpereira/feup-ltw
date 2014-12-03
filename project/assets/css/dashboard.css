@@ -49,7 +49,7 @@ body {
 .placeholders h4 {
 	margin-bottom: 0;
 }
-.placeholders div:hover #my-poll-delete-btn {
+.placeholder-container:hover #my-poll-delete-btn {
 	display: flex;
 }
 
@@ -64,7 +64,8 @@ body {
 
 	display: inline-block;
 	position: relative;
-	border: solid red 1px;
+
+	/*border: solid red 1px;*/
 }
 
 .placeholder-containter-img {
