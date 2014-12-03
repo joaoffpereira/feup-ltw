@@ -23,19 +23,19 @@ include 'templates/navbar.php';
 								<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
 								<h4 class="modal-category" id="myModalCategory"> <?= $poll['category'] ?></h4>
 								<div class="add-poll-modal-checkbox">
-								<?php 
-									if($poll['isPrivate'] === '1') {
-										$checkboxVal = "checked"; 
-										$value = "private";
-									}
-									else {
-										$checkboxVal = ""; 
-										$value = "public";
-									}
-									if($_SESSION['idUser'] === $poll['idUser']) 
-										$isDisabled = "enabled"; 
-									else $isDisabled = "disabled"; ?>
-								<label><input type="checkbox" id="privacyChanged" name="isPrivate" value=<?=$value ?> <?=$checkboxVal ?> <?=$isDisabled ?> idPoll=<?=$idPoll ?> > Private</label>
+									<?php 
+										if($poll['isPrivate'] === '1') {
+											$checkboxVal = "checked"; 
+											$value = "private";
+										}
+										else {
+											$checkboxVal = ""; 
+											$value = "public";
+										}
+										if($_SESSION['idUser'] === $poll['idUser']) 
+											$isDisabled = "enabled"; 
+										else $isDisabled = "disabled"; ?>
+									<label><input type="checkbox" id="privacyChanged" name="isPrivate" value=<?=$value ?> <?=$checkboxVal ?> <?=$isDisabled ?> idPoll=<?=$idPoll ?> > Private</label>
 								</div>
 							</div>
 
@@ -67,6 +67,18 @@ include 'templates/navbar.php';
 										</a>
 										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 										<button type="submit" class="btn btn-primary">Save changes</button>
+											<div class="row">
+											  	<div class="col-lg-6">
+												    <div class="input-group">
+											      	<span class="input-group-btn">
+												        <button class="btn btn-default" type="button">
+											        		<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+											        	</button>
+											      	</span>
+											      	<input type="text" class="form-control" value=<?=dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'])."index.php?page=viewPoll&id=".$idPoll ?> readonly>
+											    	</div><!-- /input-group -->
+											  	</div><!-- /.col-lg-6 -->
+										</div>
 									</div>
 								</form>
 							</div>
