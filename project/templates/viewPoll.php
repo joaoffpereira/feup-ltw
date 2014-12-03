@@ -13,6 +13,7 @@ include 'templates/navbar.php';
 				</div>
 
 				<div class="modal fade" id="viewPollModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -21,6 +22,21 @@ include 'templates/navbar.php';
 								</button>
 								<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
 								<h4 class="modal-category" id="myModalCategory"> <?= $poll['category'] ?></h4>
+								<div class="add-poll-modal-checkbox">
+								<?php 
+									if($poll['isPrivate'] === '1') {
+										$checkboxVal = "checked"; 
+										$value = "private";
+									}
+									else {
+										$checkboxVal = ""; 
+										$value = "public";
+									}
+									if($_SESSION['idUser'] === $poll['idUser']) 
+										$isDisabled = "enabled"; 
+									else $isDisabled = "disabled"; ?>
+								<label><input type="checkbox" id="privacyChanged" name="isPrivate" value=<?=$value ?> <?=$checkboxVal ?> <?=$isDisabled ?> idPoll=<?=$idPoll ?> > Private</label>
+								</div>
 							</div>
 
 							<form id="answerPoll" method="POST" action=<?="actions.php?action=answerPoll&id=".$idPoll ?> >

@@ -2,7 +2,7 @@
 include_once("connection.php");
 
 try {
-	(isset($_POST['isPrivate']) && $_POST['isPrivate'] === 'No') ? $isPrivate = 1 : $isPrivate = 0;
+	(isset($_POST['isPrivate']) && $_POST['isPrivate'] === 'Yes') ? $isPrivate = 1 : $isPrivate = 0;
 
 	$idCategory = $_POST["inputCategory"];
 
@@ -44,6 +44,6 @@ try {
 	echo $e->getMessage();
 }
 
-header("Location: index.php?page=myPolls");
-exit;
+//header("Location: index.php?page=myPolls");
+//exit;
 ?>
