@@ -24,10 +24,9 @@ try {
 		$image,
 		$idCategory));
 
-	//$idPoll = $dbh->lastInsertId();
-
 	$stmt = $dbh->prepare(
 		'SELECT MAX(idPoll) AS lastId FROM Poll');
+	
 	$stmt->execute();
 	$idPoll = $stmt->fetch()['lastId'];
 

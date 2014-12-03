@@ -12,12 +12,10 @@
 			$idPoll,
 			$question,
 			$image));
-	
-	
-	//$idQuestion = $dbh->lastInsertId();
 
 	$stmt = $dbh->prepare(
 		'SELECT MAX(idQuestion) AS lastId FROM Question');
+	
 	$stmt->execute();
 	$idQuestion = $stmt->fetch()['lastId'];
 

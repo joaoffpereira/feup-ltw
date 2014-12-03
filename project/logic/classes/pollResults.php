@@ -1,5 +1,6 @@
 <?php
 	include_once("connection.php");
+	$selectedOpt = array();
 
 	try {
 		include("getPoll.php");
@@ -21,7 +22,7 @@
 
 				if($answered) {
 					$counterx++;
-					$selectedOpt[] = $opt['idOption'];
+					array_push($selectedOpt, $opt['idOption']);
 					break;
 				}
 			}

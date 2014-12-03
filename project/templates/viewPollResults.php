@@ -37,17 +37,15 @@ include 'templates/navbar.php';
 											<?php foreach($currentQuestion['options'] as $currentOption): ?>
 												<div class="radio">
 													<label>
-														<?php if($selectedOpt[$i] === $currentOption['idOption']) { ?>
+														<?php if(($answered && $selectedOpt[$i]) === $currentOption['idOption']) {?>
 														<input type="radio" checked name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
 														<?=$currentOption['option'] ?>
-														<?php } 
+														<?php }
 														else { ?>
 														<input type="radio" disabled name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
 														<?=$currentOption['option'] ?>
 														<?php } ?>
-														<label align="right">
-															<?=$currentOption['counter'] ?>
-														</label>
+														<label align="right"> <?=$currentOption['counter'] ?> </label>
 													</label>
 												</div>
 											<?php endforeach; ?>

@@ -52,7 +52,7 @@ switch ($currentPage) {
 
 	case 'viewPollResults':
 	$idPoll = $_GET['id'];
-	include 'logic/classes/getPoll.php';
+	include 'logic/classes/pollResults.php';
 	include 'templates/viewPollResults.php';
 	break;
 
