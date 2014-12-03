@@ -5,27 +5,15 @@ try {
 	$currentUsername = $_SESSION['username'];
 	$newUsername = $_POST["newUsername"];
 
-	if ($newUsername === "") {
-		echo "
-		<script type=\"text/javascript\">
-			window.alert('A new username was not specified.');
-			window.location.href = 'index.php?page=profile';
-		</script>";
-		break;
-	}
+	if ($newUsername === "")
+		$_SESSION['responseContent'] = 'A new username was not specified.';
 
 	$stmt = $dbh->prepare(
 		'SELECT * FROM User
 		WHERE username = ?');
 	$stmt->execute(array($newUsername));
-	if ($stmt->fetch()) {
-		echo "
-		<script type=\"text/javascript\">
-			window.alert('That username is already taken.');
-			window.location.href = 'index.php?page=profile';
-		</script>";
-		break;
-	}
+	if ($stmt->fetch())
+		$_SESSION['responseContent'] = 'That username is already taken.';
 
 	$stmt = $dbh->prepare(
 		'UPDATE User
@@ -37,20 +25,10 @@ try {
 
 	$_SESSION['username'] = $newUsername;
 
-	echo "
-	<script type=\"text/javascript\">
-		window.alert('Username successfully edited.');
-		window.location.href = 'index.php?page=profile';
-	</script>";
-	break;
+	$_SESSION['responseContent'] = 'Username successfully edited.';
 } catch(PDOException $e) {
 	echo $e->getMessage();
-	echo "
-	<script type=\"text/javascript\">
-		window.alert('Could not update database, please try again later.');
-		window.location.href = 'index.php?page=profile';
-	</script>";
-	break;
+	$_SESSION['responseContent'] = 'Could not update database, please try again later.';
 }
 
 header("Location: index.php?page=profile");

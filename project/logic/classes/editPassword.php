@@ -6,14 +6,8 @@ try {
 	$newPassword = $_POST["newPassword"];
 	$newPasswordConfirmation = $_POST["newPasswordConfirmation"];
 
-	if ($newPassword !== $newPasswordConfirmation) {
-		echo "
-		<script type=\"text/javascript\">
-			window.alert('Those passwords do not match.');
-			window.location.href = 'index.php?page=profile';
-		</script>";
-		break;
-	}
+	if ($newPassword !== $newPasswordConfirmation)
+		$_SESSION['responseContent'] = 'Those passwords do not match.';
 
 	$stmt = $dbh->prepare(
 		'UPDATE User
@@ -23,20 +17,10 @@ try {
 		hash('sha256', $newPassword),
 		$currentUsername));
 
-	echo "
-	<script type=\"text/javascript\">
-		window.alert('Password successfully edited.');
-		window.location.href = 'index.php?page=profile';
-	</script>";
-	break;
+	$_SESSION['responseContent'] = 'Password successfully edited.';
 } catch(PDOException $e) {
 	echo $e->getMessage();
-	echo "
-	<script type=\"text/javascript\">
-		window.alert('Could not update database, please try again later.');
-		window.location.href = 'index.php?page=profile';
-	</script>";
-	break;
+	$_SESSION['responseContent'] = 'Could not update database, please try again later.';
 }
 
 header("Location: index.php?page=profile");
