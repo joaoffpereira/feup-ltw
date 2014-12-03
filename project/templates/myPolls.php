@@ -31,7 +31,7 @@
 							</a>
 
 							<span class="placeholder-align-helper"></span>
-							<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=My+polls"; ?> id="modal-view">
+							<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=".urlencode("My polls"); ?> id="modal-view">
 								<img id="placeholder-img" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" class="img-responsive" alt="Generic placeholder thumbnail">
 							</a>
 						</div>
