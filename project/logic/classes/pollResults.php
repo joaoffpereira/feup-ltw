@@ -6,8 +6,8 @@
 		include("getPoll.php");
 
 		$counterx = 0;
-		foreach ($poll['questions'] as $qt)
-			foreach ($qt['options'] as $opt) {
+		foreach ($poll['questions'] as &$qt)
+			foreach ($qt['options'] as &$opt) {
 
 				$stmt = $dbh->prepare(
 				'SELECT * FROM UserOption
@@ -20,10 +20,14 @@
 
 				$answered = $stmt->fetch();
 
+				$stmt = $dbh->prepare('SELECT COUNT(*) as counterResult FROM UserOption WHERE idOption = ?');
+				$stmt->execute(array($opt['idOption']));
+				$counterOpt = $stmt->fetch()['counterResult'];
+				$opt['counterResult'] = ($counterOpt > 0) ? $counterOpt : 0;
+
 				if($answered) {
 					$counterx++;
 					array_push($selectedOpt, $opt['idOption']);
-					break;
 				}
 			}
 

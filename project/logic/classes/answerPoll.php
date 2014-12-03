@@ -13,11 +13,7 @@
 		$stmt->execute(array(
 			$_SESSION["idUser"],
 			$idOption));
-
-		$stmt = $dbh->prepare(
-		'UPDATE Option SET counter = counter + 1  WHERE idOption = ?');
-		$stmt->execute(array($idOption));
-	}
+		}
 
 
 	} catch(PDOException $e) {

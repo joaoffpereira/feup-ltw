@@ -37,12 +37,13 @@ try {
 		$question = $_POST[$questionN];
 		if($question !== "")
 			include("addQuestion.php");
+		echo "Entrei";
 	}
 
 } catch(PDOException $e) {
 	echo $e->getMessage();
 }
 
-//header("Location: index.php?page=myPolls");
-//exit;
+header("Location: index.php?page=myPolls");
+exit;
 ?>

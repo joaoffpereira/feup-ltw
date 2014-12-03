@@ -45,7 +45,7 @@ include 'templates/navbar.php';
 														<input type="radio" disabled name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
 														<?=$currentOption['option'] ?>
 														<?php } ?>
-														<label align="right"> <?=$currentOption['counter'] ?> </label>
+														<label align="right"> <?=$currentOption['counterResult'] ?> </label>
 													</label>
 												</div>
 											<?php endforeach; ?>
