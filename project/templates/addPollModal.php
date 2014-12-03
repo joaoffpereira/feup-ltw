@@ -1,4 +1,4 @@
-<div class="modal fade" id="addPollModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="addPollModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -12,7 +12,7 @@
 				<div class="modal-body">
 					<div class="poll-details row">
 						<div class="question-text form-group-lg col-xs-12 col-sm-12">
-							<input type="text" class="form-control input_question" name="title" size="100" placeholder="Title" autofocus required>
+							<input type="text" class="form-control input_question" name="title" size="100" placeholder="Title" required autofocus>
 						</div>
 
 						<input type="hidden" id="category" name="inputCategory" value="">
@@ -31,7 +31,7 @@
 						</div>
 
 						<div class="add-poll-modal-checkbox col-xs-6 col-sm-3">
-							<label><input type="checkbox" id="isPrivate" name="isPrivate[]" value="Yes"> Private</label>
+							<label><input type="checkbox" id="isPrivate" name="isPrivate" value="Yes"> Private</label>
 						</div>
 
 						<div id="poll-pic-selection" class="col-xs-12 col-md-12">
@@ -42,7 +42,7 @@
 					<div class="questions">
 						<div class="question" align="left">
 							<div class="question-text form-group-lg">
-								<input type="text" class="form-control input_question" number="1" name="question1" size="100" placeholder="Ask something..." autofocus required>
+								<input type="text" class="form-control input_question" number="1" name="question1" size="100" placeholder="Ask something..." required>
 							</div>
 
 							<div class="question-option form-group-sm">

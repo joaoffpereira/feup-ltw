@@ -26,7 +26,7 @@ include 'templates/navbar.php';
 									<h4 id="viewPollModalCategory" class="modal-category col-xs-6 col-sm-3 col-md-3"> <?= $poll['category'] ?></h4>
 
 									<div id="viewPollModalPrivacy" class="add-poll-modal-checkbox col-xs-6 col-sm-9 col-md-9">
-										<?php 
+										<?php
 										if($poll['isPrivate'] === '1') {
 											$checkboxVal = "checked"; 
 											$value = "private";
@@ -67,9 +67,22 @@ include 'templates/navbar.php';
 									</div>
 									<div class="modal-footer">
 										<div class="row">
-											<a class="col-sm-12 col-md-12" href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode(urldecode($_GET['previous'])) ?>>
-												<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
-											</a>
+											<div id="poll-results-and-share-url" class="container-fluid row">
+												<a class="col-sm-12 col-md-3" href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode(urldecode($_GET['previous'])) ?>>
+													<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
+												</a>
+												<div class="col-sm-12 col-md-9">
+													<div class="input-group">
+														<span class="input-group-btn">
+															<button class="btn btn-default" type="button">
+																<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+															</button>
+														</span>
+														<input id="share-url-field" type="text" class="form-control" value=<?=dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll ?> readonly>
+													</div>
+												</div>
+											</div>
+
 											<div class="col-sm-12 col-md-12">
 												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 												<button type="submit" class="btn btn-primary">Save changes</button>

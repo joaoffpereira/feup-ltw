@@ -103,6 +103,12 @@ body {
 #viewPollModalPrivacy label {
 	margin-bottom: 0;
 }
+#poll-results-and-share-url {
+	margin-bottom: 15px;
+}
+#share-url-field {
+	cursor: auto;
+}
 
 .my-polls-header {
 	margin-left: 0;

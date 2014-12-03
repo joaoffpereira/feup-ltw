@@ -1,7 +1,9 @@
 <?php
 	require_once 'config.php';
 
-	switch ($_GET[action]) {
+	$action = $_GET['action'] != '' ? $_GET['action'] : '';
+	
+	switch ($action) {
 		case 'signUp':
 			include 'logic/classes/signUp.php';
 			break;
