@@ -5,7 +5,7 @@ include TEMPLATES_PATH . '/header.php';
 
 $currentPage = isset($_GET['page']) ? $_GET['page'] : 'signIn';
 
-$pagesWithMandatoryLogin = array('feed', 'myPolls', 'profile', 'signOut');
+$pagesWithMandatoryLogin = array('feed', 'myPolls', 'profile', 'signOut', 'viewPoll', 'viewPollResults', 'search');
 
 // if the current page is one of the pages with mandatory login
 foreach ($pagesWithMandatoryLogin as $page) {

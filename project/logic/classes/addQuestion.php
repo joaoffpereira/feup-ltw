@@ -14,7 +14,12 @@
 			$image));
 	
 	
-	$idQuestion = $dbh->lastInsertId();
+	//$idQuestion = $dbh->lastInsertId();
+
+	$stmt = $dbh->prepare(
+		'SELECT MAX(idQuestion) AS lastId FROM Question');
+	$stmt->execute();
+	$idQuestion = $stmt->fetch()['lastId'];
 
 	$optionN = 'option'.$i.'-1';
 
