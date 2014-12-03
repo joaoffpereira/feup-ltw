@@ -93,3 +93,12 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+	<?php
+	if($_SESSION['responseContent'] != '') {
+		echo "alert('".$_SESSION['responseContent']."');";
+		$_SESSION['responseContent'] = '';
+	}
+	?>
+	</script>
