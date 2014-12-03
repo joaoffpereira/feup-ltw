@@ -6,6 +6,16 @@
 		for($j=0; isset($_POST[$j]); $j++) {
 		$idOption = $_POST[$j];
 
+
+		$stmt = $dbh->prepare(
+			'DELETE FROM UserOption
+			WHERE idUser = ? 
+			AND idOption = ?');
+		$stmt->execute(array(
+			$_SESSION["idUser"],
+			$idOption));
+		}
+		
 		$stmt = $dbh->prepare(
 			'INSERT INTO UserOption
 			(idUser, idOption)
