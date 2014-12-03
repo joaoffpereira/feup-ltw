@@ -31,7 +31,7 @@
 						</div>
 
 						<div class="add-poll-modal-checkbox col-xs-6 col-sm-3">
-							<label><input type="checkbox" id="isPrivate" name="isPrivate" value="No"> Private</label>
+							<label><input type="checkbox" id="isPrivate" name="isPrivate[]" value="Yes"> Private</label>
 						</div>
 
 						<div id="poll-pic-selection" class="col-xs-12 col-md-12">
