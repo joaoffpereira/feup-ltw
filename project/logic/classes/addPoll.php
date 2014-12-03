@@ -37,7 +37,6 @@ try {
 		$question = $_POST[$questionN];
 		if($question !== "")
 			include("addQuestion.php");
-		echo "Entrei";
 	}
 
 } catch(PDOException $e) {
