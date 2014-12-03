@@ -10,7 +10,7 @@ www.fe.up.pt/~ei12079/pollhub
 - [x] Users should be able to register an account;
 - [x] Users should be able to login/logout from the system;
 - [x] Registered users should be able to create a poll;
-- [ ] Registered users should be able to manage their polls;
+- [x] Registered users should be able to manage their polls;
 - [x] Polls should contain one image and several possible answers;
 - [x] Users should be able to list, search and answer to polls;
 - [x] One user should not be able to answer twice to the same poll;
