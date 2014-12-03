@@ -39,7 +39,7 @@
 						</div>
 
 						<div id="poll-pic-selection" class="col-xs-12 col-md-12">
-							<input type="file" name="poll-pic" class="filestyle" data-buttonBefore="true">
+							<input type="file" name="poll-pic" class="filestyle" data-buttonBefore="true" data-buttonText="Add an image to this poll">
 						</div>
 					</div>
 

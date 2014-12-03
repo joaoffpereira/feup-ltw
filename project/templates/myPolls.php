@@ -22,17 +22,16 @@
 					<?php include 'addPollModal.php'; ?>
 				</div>
 
-				<div class="row placeholders">
+				<div class="placeholders row">
 					<?php foreach ($polls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<div>
-							<a id="my-poll-delete-btn" href=<?="actions.php?action=deletePoll&id=".$currentPoll['idPoll']?> >
-								<i class="glyphicon glyphicon-remove"></i>
+						<div class="placeholder-container">
+							<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=My+polls"; ?>>
+								<img class="resize-to-fit-and-center placeholder-containter-img" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" alt="Default poll image">
 							</a>
 
-							<span class="placeholder-align-helper"></span>
-							<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=My+polls"; ?> id="modal-view">
-								<img id="placeholder-img" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" class="img-responsive" alt="Generic placeholder thumbnail">
+							<a id="my-poll-delete-btn" href=<?="actions.php?action=deletePoll&id=".$currentPoll['idPoll']?>>
+								<i class="glyphicon glyphicon-remove"></i>
 							</a>
 						</div>
 						
