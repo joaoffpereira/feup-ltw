@@ -31,11 +31,11 @@
 						</div>
 
 						<div class="add-poll-modal-checkbox col-xs-6 col-sm-3">
-							<label><input type="checkbox" id="isPrivate" name="isPrivate" value="No"> Private</label>
+							<label><input type="checkbox" id="isPrivate" name="isPrivate[]" value="Yes"> Private</label>
 						</div>
 
 						<div id="poll-pic-selection" class="col-xs-12 col-md-12">
-							<input type="file" name="poll-pic" class="filestyle" data-buttonBefore="true">
+							<input type="file" name="poll-pic" class="filestyle" data-buttonBefore="true" data-buttonText="Add an image to this poll">
 						</div>
 					</div>
 

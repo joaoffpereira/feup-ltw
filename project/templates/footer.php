@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="actions/fileUpload.js"></script>
 	<script type="text/javascript" src="actions/openViewPollModal.js"></script>
 	<script type="text/javascript" src="actions/setUserProfilePic.js"></script>
+	<script type="text/javascript" src="actions/updatePrivacy.js"></script>
 	<script type="text/javascript" src="actions/redirectOnClosingModal.js"></script>
 	
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
