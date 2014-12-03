@@ -93,6 +93,16 @@ body {
 	vertical-align: middle;
 }
 
+#viewPollModalCategory {
+	margin-bottom: 0;
+}
+#viewPollModalPrivacy {
+	margin-top: 7px;
+	margin-bottom: 0;
+}
+#viewPollModalPrivacy label {
+	margin-bottom: 0;
+}
 
 .my-polls-header {
 	margin-left: 0;

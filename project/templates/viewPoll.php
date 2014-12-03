@@ -21,21 +21,25 @@ include 'templates/navbar.php';
 									<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 								</button>
 								<h3 class="modal-title" id="myModalLabel"> <?= $poll['title'] ?> </h3>
-								<h4 class="modal-category" id="myModalCategory"> <?= $poll['category'] ?></h4>
-								<div class="add-poll-modal-checkbox">
-								<?php 
-									if($poll['isPrivate'] === '1') {
-										$checkboxVal = "checked"; 
-										$value = "private";
-									}
-									else {
-										$checkboxVal = ""; 
-										$value = "public";
-									}
-									if($_SESSION['idUser'] === $poll['idUser']) 
-										$isDisabled = "enabled"; 
-									else $isDisabled = "disabled"; ?>
-								<label><input type="checkbox" id="privacyChanged" name="isPrivate" value=<?=$value ?> <?=$checkboxVal ?> <?=$isDisabled ?> idPoll=<?=$idPoll ?> > Private</label>
+
+								<div class="row">
+									<h4 id="viewPollModalCategory" class="modal-category col-xs-6 col-sm-3 col-md-3"> <?= $poll['category'] ?></h4>
+
+									<div id="viewPollModalPrivacy" class="add-poll-modal-checkbox col-xs-6 col-sm-9 col-md-9">
+										<?php 
+										if($poll['isPrivate'] === '1') {
+											$checkboxVal = "checked"; 
+											$value = "private";
+										}
+										else {
+											$checkboxVal = ""; 
+											$value = "public";
+										}
+										if($_SESSION['idUser'] === $poll['idUser']) 
+											$isDisabled = "enabled"; 
+										else $isDisabled = "disabled"; ?>
+										<label><input type="checkbox" id="privacyChanged" name="isPrivate" value=<?=$value ?> <?=$checkboxVal ?> <?=$isDisabled ?> idPoll=<?=$idPoll ?> > Private</label>
+									</div>
 								</div>
 							</div>
 
@@ -62,11 +66,15 @@ include 'templates/navbar.php';
 										<?php $i++; endforeach; ?>
 									</div>
 									<div class="modal-footer">
-										<a href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode(urldecode($_GET['previous'])) ?>>
-											<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
-										</a>
-										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-										<button type="submit" class="btn btn-primary">Save changes</button>
+										<div class="row">
+											<a class="col-sm-12 col-md-12" href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode(urldecode($_GET['previous'])) ?>>
+												<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
+											</a>
+											<div class="col-sm-12 col-md-12">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-primary">Save changes</button>
+											</div>
+										</div>
 									</div>
 								</form>
 							</div>
