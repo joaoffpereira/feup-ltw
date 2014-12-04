@@ -75,8 +75,8 @@ include 'templates/navbar.php';
 													</span>
 													
 													<?php
-														$pollURL = dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll;
-														$googlePlusTwitterPollURL = urlencode($pollURL);
+													$pollURL = dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll;
+													$googlePlusTwitterPollURL = urlencode($pollURL);
 													?>
 
 													<input id="share-url-field" type="text" class="form-control" value=<?=$pollURL?> readonly>
@@ -122,7 +122,7 @@ include 'templates/navbar.php';
 		</div>
 	</div>
 
-<!--javascript to facebook -->
+	<!--javascript to facebook -->
 	<div id="fb-root"></div>
 	<script>
 		window.fbAsyncInit = function() {
@@ -139,42 +139,42 @@ include 'templates/navbar.php';
 			e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
 			document.getElementById('fb-root').appendChild(e);
 		}());
-	</script>
-	
-	<script type="text/javascript">
+
 		$(document).ready(function() {
 			$('#share-button-facebook').click(function(e) {
 				e.preventDefault();
-				FB.ui( {
+
+				var imgPath = "<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : HOME_URL . '/assets/img/default-poll.png' ?>";
+				alert(imgPath);
+
+				FB.ui({
 					method: 'feed',
 					name: "<?=$poll['title']?>",
 					link: "<?=$pollURL?>",
-					picture: "<?=UPLOADS_URL.'/'.$poll['image']?>",
+					picture: imgPath,
 					caption: 'This is the content of the "caption" field.',
 					description: 'This is the content of the "description" field, below the caption.',
 					message: ''
 				});
 			});
 		});
-	</script>	
-
-<!-- javascript to google+ -->
-	<script type="text/javascript">
-	  (function() {
-	    var po = document.createElement('script');
-	    po.type = 'text/javascript';
-	    po.async = true;
-	    po.src = 'https://apis.google.com/js/plusone.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-	  })();
 	</script>
 
+	<!-- javascript to google+ -->
 	<script type="text/javascript">
-	 	$(document).ready(function() {
-	 		$('#share-button-googleplus').click(function(e) {
-	 			e.preventDefault();
-	 			window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-	 			return false;
-	 		});
-	 	});
+		(function() {
+			var po = document.createElement('script');
+			po.type = 'text/javascript';
+			po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+
+		$(document).ready(function() {
+			$('#share-button-googleplus').click(function(e) {
+				e.preventDefault();
+				window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+				return false;
+			});
+		});
 	</script>

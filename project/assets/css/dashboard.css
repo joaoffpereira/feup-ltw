@@ -86,7 +86,7 @@ body {
 	color: red;
 }
 
-#deletePollConfirmationModal form {
+#deletePollConfirmationModal {
 	line-height: initial;
 	text-align: initial;
 }
