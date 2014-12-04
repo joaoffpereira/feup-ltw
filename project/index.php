@@ -44,7 +44,7 @@ switch ($currentPage) {
 	case 'viewPoll':	
 	$idPoll = $_GET['id'];
 	include 'logic/classes/pollResults.php';
-
+	
 	if(!$answered)
 		include 'templates/viewPoll.php';
 	else include 'templates/viewPollResults.php';

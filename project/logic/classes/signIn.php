@@ -25,11 +25,14 @@ try {
 	$_SESSION['idUser'] = $user['idUser'];
 	$_SESSION['username'] = $username;
 	$_SESSION['image'] = $user['image'];
+	$_SESSION['lastLoginDate'] = $user['lastLoginDate'];
+	$_SESSION['registerDate'] = $user['registerDate'];
 
 	$stmt = $dbh->prepare(
 		'UPDATE User
 		SET lastLoginDate = ?
 		WHERE idUser = ?');
+
 	$stmt->execute(array(date('Y-m-d H:i:s'), $_SESSION['idUser']));
 } catch (PDOException $e) {
 	die($e->getMessage());
