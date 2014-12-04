@@ -21,6 +21,15 @@
 	<script type="text/javascript" src="actions/setUserProfilePic.js"></script>
 	<script type="text/javascript" src="actions/updatePrivacy.js"></script>
 	<script type="text/javascript" src="actions/redirectOnClosingModal.js"></script>
+
+	<script type="text/javascript">
+		<?php
+		if($_SESSION['responseContent'] != '') {
+			echo "alert('".$_SESSION['responseContent']."');";
+			$_SESSION['responseContent'] = '';
+		}
+		?>
+	</script>
 	
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
