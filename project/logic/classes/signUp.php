@@ -16,12 +16,9 @@ try {
 		WHERE username = ?');
 	$stmt->execute(array($user));
 	if($stmt->fetch()) {
-		echo "
-		<script type=\"text/javascript\">
-			window.alert('That username is already taken.');
-			window.location.href = 'index.php?page=signUp';
-		</script>";
-		break;
+		$_SESSION['responseContent'] = 'That username is already taken.';
+		header("Location: index.php?page=signUp");
+		exit;
 	}
 
 	$stmt = $dbh->prepare(
@@ -36,14 +33,11 @@ try {
 		$gender));
 } catch(PDOException $e) {
 	echo $e->getMessage();
-	echo "
-	<script type=\"text/javascript\">
-		window.alert('Could not update database, please try again later.');
-		window.location.href = 'index.php?page=signUp';
-	</script>";
-	break;
+	$_SESSION['responseContent'] = 'Could not update database, please try again later.';
+	header("Location: index.php?page=signUp");
+	exit;
 }
 
-header("Location: index.php");
+header("Location: index.php?page=feed");
 exit;
 ?>

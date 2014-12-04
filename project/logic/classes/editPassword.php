@@ -6,8 +6,11 @@ try {
 	$newPassword = $_POST["newPassword"];
 	$newPasswordConfirmation = $_POST["newPasswordConfirmation"];
 
-	if ($newPassword !== $newPasswordConfirmation)
+	if ($newPassword !== $newPasswordConfirmation) {
 		$_SESSION['responseContent'] = 'Those passwords do not match.';
+		header("Location: index.php?page=profile");
+		exit();
+	}
 
 	$stmt = $dbh->prepare(
 		'UPDATE User

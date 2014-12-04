@@ -5,15 +5,21 @@ try {
 	$currentUsername = $_SESSION['username'];
 	$newUsername = $_POST["newUsername"];
 
-	if ($newUsername === "")
+	if ($newUsername === "") {
 		$_SESSION['responseContent'] = 'A new username was not specified.';
+		header("Location: index.php?page=profile");
+		exit();
+	}
 
 	$stmt = $dbh->prepare(
 		'SELECT * FROM User
 		WHERE username = ?');
 	$stmt->execute(array($newUsername));
-	if ($stmt->fetch())
+	if ($stmt->fetch()) {
 		$_SESSION['responseContent'] = 'That username is already taken.';
+		header("Location: index.php?page=profile");
+		exit();
+	}
 
 	$stmt = $dbh->prepare(
 		'UPDATE User

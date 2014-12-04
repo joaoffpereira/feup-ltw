@@ -35,3 +35,12 @@
 	<div class="create-account">
 		<p><a id="link-signup" href="index.php">« Back</a></p>
 	</div>
+
+	<script type="text/javascript">
+		<?php
+		if($_SESSION['responseContent'] != '') {
+			echo "alert('".$_SESSION['responseContent']."');";
+			$_SESSION['responseContent'] = '';
+		}
+		?>
+	</script>

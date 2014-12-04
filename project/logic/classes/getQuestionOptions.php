@@ -1,16 +1,16 @@
 <?php
-	include_once("connection.php");
+include_once("connection.php");
 
-	try {
+try {
 
-		$stmt = $dbh->prepare(
-			'SELECT * FROM Option
-			WHERE idQuestion = ?');
-		$stmt->execute(array($idQuestion));
+	$stmt = $dbh->prepare(
+		'SELECT * FROM Option
+		WHERE idQuestion = ?');
+	$stmt->execute(array($idQuestion));
 
-		$options = $stmt->fetchAll();
+	$options = $stmt->fetchAll();
 
-	} catch(PDOException $e) {
-		echo $e->getMessage();
-	}
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
 ?>

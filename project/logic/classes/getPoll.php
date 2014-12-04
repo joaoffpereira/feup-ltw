@@ -1,34 +1,34 @@
 <?php
-	include_once("connection.php");
+include_once("connection.php");
 
-	try {
-		$stmt = $dbh->prepare(
-			'SELECT * FROM Poll
-			WHERE idPoll = ?');
-		$stmt->execute(array($idPoll));
+try {
+	$stmt = $dbh->prepare(
+		'SELECT * FROM Poll
+		WHERE idPoll = ?');
+	$stmt->execute(array($idPoll));
 
-		$poll = $stmt->fetch();
+	$poll = $stmt->fetch();
 
-		$stmt = $dbh->prepare(
-			'SELECT category FROM Category
-			WHERE idCategory = ?');
-		$stmt->execute(array($poll['idCategory']));
+	$stmt = $dbh->prepare(
+		'SELECT category FROM Category
+		WHERE idCategory = ?');
+	$stmt->execute(array($poll['idCategory']));
 
-		$poll['category'] = $stmt->fetch()['category'];
+	$poll['category'] = $stmt->fetch()['category'];
 
-		$getuser = $dbh->prepare(
-			'SELECT username FROM User
-			WHERE idUser = ?');
-		$getuser->execute(array($poll['idUser']));
+	$getuser = $dbh->prepare(
+		'SELECT username FROM User
+		WHERE idUser = ?');
+	$getuser->execute(array($poll['idUser']));
 
-		$user = $getuser->fetch();
+	$user = $getuser->fetch();
 
-		include("getPollQuestions.php");
+	include("getPollQuestions.php");
 
-		$poll['questions'] = $questions;
-		$poll['author'] = $user['username'];
+	$poll['questions'] = $questions;
+	$poll['author'] = $user['username'];
 
-	} catch(PDOException $e) {
-		echo $e->getMessage();
-	}
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
 ?>

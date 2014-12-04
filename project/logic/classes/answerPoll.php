@@ -1,24 +1,24 @@
 <?php
-	include_once("connection.php");
+include_once("connection.php");
 
-	try {
+try {
 
-		for($j=0; isset($_POST[$j]); $j++) {
+	for($j=0; isset($_POST[$j]); $j++) {
 		$idOption = $_POST[$j];
 
 		$stmt = $dbh->prepare(
 			'INSERT INTO UserOption
 			(idUser, idOption)
-			VALUES (?,?)');
+			VALUES (?, ?)');
 		$stmt->execute(array(
 			$_SESSION["idUser"],
 			$idOption));
-		}
-
-
-	} catch(PDOException $e) {
-		echo $e->getMessage();
 	}
 
-	header("Location: index.php?page=viewPollResults&id=".$idPoll);
+
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
+
+header("Location: index.php?page=viewPollResults&id=".$idPoll);
 ?>
