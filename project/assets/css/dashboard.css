@@ -103,11 +103,24 @@ body {
 #viewPollModalPrivacy label {
 	margin-bottom: 0;
 }
-#poll-results-and-share-url {
+#share-url-div {
 	margin-bottom: 15px;
 }
 #share-url-field {
 	cursor: auto;
+}
+#show-poll-results-button {
+	margin-bottom: 15px;
+}
+#view-poll-buttons input,
+#view-poll-buttons button {
+	width: 100%;
+}
+#view-poll-cancel-button {
+	padding-right: 7px;
+}
+#view-poll-save-button {
+	padding-left: 7px;
 }
 
 .my-polls-header {

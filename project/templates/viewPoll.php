@@ -66,25 +66,33 @@ include 'templates/navbar.php';
 									</div>
 									<div class="modal-footer">
 										<div class="row">
-											<div id="poll-results-and-share-url" class="container-fluid row">
-												<a class="col-sm-12 col-md-3" href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode($previousPage) ?>>
-													<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
-												</a>
-												<div class="col-sm-12 col-md-9">
-													<div class="input-group">
-														<span id="tooltip_span" data-placement="bottom" title="Copied" class="input-group-btn">
-															<button id="click-to-copy" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard"  data-clipboard-target="share-url-field" class="btn btn-default" type="button">
-																<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-															</button>
-														</span>
-														<input id="share-url-field" type="text" class="form-control" value=<?=dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll ?> readonly>
-													</div>
+											<div id="share-url-div" class="col-xs-12 col-md-12">
+												<div class="input-group">
+													<span id="tooltip_span" data-placement="bottom" title="Copied" class="input-group-btn">
+														<button id="click-to-copy" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard"  data-clipboard-target="share-url-field" class="btn btn-default" type="button">
+															<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+														</button>
+													</span>
+
+													<input id="share-url-field" type="text" class="form-control" value=<?=dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll ?> readonly>
 												</div>
 											</div>
 
-											<div class="col-sm-12 col-md-12">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-												<button type="submit" class="btn btn-primary">Save changes</button>
+											<div id="view-poll-buttons" class="col-xs-12 col-md-12">
+												<div class="row">
+													<div id="show-poll-results-button" class="col-xs-12 col-sm-3">
+														<a href=<?= "index.php?page=viewPollResults&id=" . $idPoll . "&previous=" . urlencode($previousPage) ?>>
+															<input type="button" id="seeResultsBtn" class="btn btn-default" value="Show results">
+														</a>
+													</div>
+
+													<div id="view-poll-cancel-button" class="col-xs-6 col-sm-offset-3 col-sm-3">
+														<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+													</div>
+													<div id="view-poll-save-button" class="col-xs-6 col-sm-3">
+														<button type="submit" class="btn btn-primary col-xs-6 col-sm-6">Save changes</button>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
