@@ -43,7 +43,11 @@ switch ($currentPage) {
 
 	case 'viewPoll':	
 	$idPoll = $_GET['id'];
-	$previousPage = urldecode($_GET['previous']);
+	if(isset($_GET['previous']))
+		$previousPage = urldecode($_GET['previous']);
+	else {
+		$previousPage = "Feed";
+	}
 
 	include 'logic/classes/pollResults.php';
 
@@ -54,7 +58,11 @@ switch ($currentPage) {
 
 	case 'viewPollResults':
 	$idPoll = $_GET['id'];
-	$previousPage = urldecode($_GET['previous']);
+	if(isset($_GET['previous']))
+		$previousPage = urldecode($_GET['previous']);
+	else {
+		$previousPage = "Feed";
+	}
 	include 'logic/classes/pollResults.php';
 	include 'templates/viewPollResults.php';
 	break;
