@@ -90,7 +90,14 @@
 						</div>
 					</div>
 				</div>
+
+				<!--last login date and register date -->
+				<div class="userLastLoginAndRegister">
+					<h5> Last login: <?=$_SESSION['lastLoginDate'];?></h5>
+					<h5> Registed in: <?=$_SESSION['registerDate'];?></h5>
+				</div>
 			</div>
+
 		</div>
 	</div>
 

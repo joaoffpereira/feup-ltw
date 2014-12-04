@@ -11,6 +11,8 @@
 	<script type="text/javascript" src="assets/js/vendor/jquery.ui.widget.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.iframe-transport.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.fileupload.js"></script>
+	<script type="text/javascript" src="assets/js/ZeroClipboard.js"></script>
+	<script type="text/javascript" src="assets/js/src/copyToClipboard.js"></script>
 
 	<script type="text/javascript" src="actions/formDropdownButton.js"></script>
 	<script type="text/javascript" src="actions/multipleQuestions.js"></script>

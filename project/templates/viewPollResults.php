@@ -1,5 +1,4 @@
 <?php 
-$previousPage = urldecode($_GET['previous']);
 include 'templates/navbar.php';
 ?>
 <link href="assets/css/dashboard.css" rel="stylesheet">
@@ -37,7 +36,7 @@ include 'templates/navbar.php';
 											<?php foreach($currentQuestion['options'] as $currentOption): ?>
 												<div class="radio">
 													<label>
-														<?php if(($answered && $selectedOpt[$i]) === $currentOption['idOption']) {?>
+														<?php if($answered && $selectedOpt[$i] === $currentOption['idOption']) {?>
 														<input type="radio" checked name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
 														<?=$currentOption['option'] ?>
 														<?php }
@@ -55,6 +54,7 @@ include 'templates/navbar.php';
 								</div>
 							</div>
 							<div class="modal-footer">
+								<button type="button" class="btn btn-default" onclick=<?="redirect(".$poll['idPoll'].")"?>> Back </button>
 								<button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
 							</div>
 						</div>
