@@ -145,7 +145,6 @@ include 'templates/navbar.php';
 				e.preventDefault();
 
 				var imgPath = "<?= $poll['image'] != '' ? UPLOADS_URL . "/" . $poll['image'] : HOME_URL . '/assets/img/default-poll.png' ?>";
-				alert(imgPath);
 
 				FB.ui({
 					method: 'feed',
