@@ -55,6 +55,7 @@ include 'templates/navbar.php';
 								</div>
 							</div>
 							<div class="modal-footer">
+								<button type="button" class="btn btn-default" onclick=<?="redirect(".$poll['idPoll'].")"?>> Back </button>
 								<button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
 							</div>
 						</div>
