@@ -30,9 +30,12 @@
 								<img class="resize-to-fit-and-center placeholder-containter-img" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" alt="Default poll image">
 							</a>
 
-							<a id="my-poll-delete-btn" href=<?="actions.php?action=deletePoll&id=".$currentPoll['idPoll']?>>
+							<a id="my-poll-delete-btn" href="#" data-toggle="modal" data-target="#deletePollConfirmationModal">
 								<i class="glyphicon glyphicon-remove"></i>
 							</a>
+
+							<!-- Modal -->
+							<?php include 'deletePollConfirmationDialog.php'; ?>
 						</div>
 						
 						<h4><?= $currentPoll['title']; ?></h4>

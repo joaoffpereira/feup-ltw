@@ -86,6 +86,13 @@ body {
 	color: red;
 }
 
+#deletePollConfirmationModal form {
+	line-height: initial;
+	text-align: initial;
+}
+#deletePollConfirmationModal form p {
+	margin: 0;
+}
 
 .resize-to-fit-and-center {
 	max-width:100%;

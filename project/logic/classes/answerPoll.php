@@ -2,6 +2,8 @@
 include_once("connection.php");
 
 try {
+	$idPoll = $_GET['id'];
+	
 	for($j=0; isset($_POST[$j]); $j++) {
 		$res = explode("-", $_POST[$j]);
 
