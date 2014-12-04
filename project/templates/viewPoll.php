@@ -73,6 +73,11 @@ include 'templates/navbar.php';
 															<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
 														</button>
 													</span>
+													
+													<?php
+														$pollURL = dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll;
+														$googlePlusTwitterPollURL = urlencode($pollURL);
+													?>
 
 													<input id="share-url-field" type="text" class="form-control" value=<?=dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll ?> readonly>
 												</div>
@@ -94,6 +99,18 @@ include 'templates/navbar.php';
 													</div>
 												</div>
 											</div>
+
+											<div id="share-buttons">
+												<a href="<?=$pollURL?>" target="_blank">
+													<img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" id="share-button-facebook"/>
+												</a>
+												<a href="https://plus.google.com/share?url=<?=$googlePlusTwitterPollURL?>" target="_blank" id="share-button-googleplus">
+													<img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google"/>
+												</a>
+												<a href="http://twitter.com/intent/tweet?url=<?=$googlePlusTwitterPollURL?>&text=<?=$poll['title']?>&hashtags=pollhub" target="_blank">
+													<img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+												</a>
+											</div>
 										</div>
 									</div>
 								</form>
@@ -104,3 +121,60 @@ include 'templates/navbar.php';
 			</div>
 		</div>
 	</div>
+
+<!--javascript to facebook -->
+	<div id="fb-root"></div>
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId: '353261791465847',
+				status: true,
+				cookie: true,
+				xfbml: true});
+		};
+
+		(function() {
+			var e = document.createElement('script');
+			e.async = true;
+			e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+			document.getElementById('fb-root').appendChild(e);
+		}());
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#share-button-facebook').click(function(e) {
+				e.preventDefault();
+				FB.ui( {
+					method: 'feed',
+					name: "<?=$poll['title']?>",
+					link: "<?=$pollURL?>",
+					picture: "<?=UPLOADS_URL.'/'.$poll['image']?>",
+					caption: 'This is the content of the "caption" field.',
+					description: 'This is the content of the "description" field, below the caption.',
+					message: ''
+				});
+			});
+		});
+	</script>	
+
+<!-- javascript to google+ -->
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script');
+	    po.type = 'text/javascript';
+	    po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+
+	<script type="text/javascript">
+	 	$(document).ready(function() {
+	 		$('#share-button-googleplus').click(function(e) {
+	 			e.preventDefault();
+	 			window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+	 			return false;
+	 		});
+	 	});
+	</script>
