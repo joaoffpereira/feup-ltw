@@ -13,9 +13,12 @@
 				<div class="row placeholders">
 					<?php foreach ($polls as $currentPoll) { ?>
 					<div class="col-xs-12 col-sm-3 placeholder">
-						<a href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=Search+results"; ?> id="modal-view" class="btn btn-lg">
-							<img src="assets/img/default-poll.png" class="img-responsive" alt="Generic placeholder thumbnail">
-						</a>
+						<div class="placeholder-container">
+							<a href=<?= "index.php?page=viewPoll&id=" . $currentPoll['idPoll'] . "&previous=Search+results"; ?> id="modal-view">
+								<img class="resize-to-fit-and-center placeholder-containter-img" href=<?= "index.php?page=viewPoll&id=".$currentPoll['idPoll']."&previous=Feed"; ?> id="modal-view" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" alt="Default poll image">
+							</a>
+						</div>
+
 						<h4><?= $currentPoll['title']; ?></h4>
 						<span class="text-muted">
 							<?= "by ".$currentPoll['author']; ?>
