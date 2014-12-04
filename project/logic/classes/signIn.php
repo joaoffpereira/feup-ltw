@@ -1,10 +1,10 @@
 <?php
 include_once("connection.php");
 
-$username = $_POST["inputUsername"];
-$password = $_POST["inputPassword"];
-
 try {
+	$username = $_POST["inputUsername"];
+	$password = $_POST["inputPassword"];
+
 	$stmt = $dbh->prepare(
 		'SELECT * FROM User
 		WHERE username = ?
@@ -26,7 +26,6 @@ try {
 		'UPDATE User
 		SET lastLoginDate = ?
 		WHERE idUser = ?');
-
 	$stmt->execute(array(date('Y-m-d H:i:s'), $_SESSION['idUser']));
 } catch (PDOException $e) {
 	die($e->getMessage());
