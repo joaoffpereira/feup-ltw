@@ -72,8 +72,8 @@ include 'templates/navbar.php';
 												</a>
 												<div class="col-sm-12 col-md-9">
 													<div class="input-group">
-														<span class="input-group-btn">
-															<button class="btn btn-default" type="button">
+														<span id="tooltip_span" data-placement="bottom" title="Copied" class="input-group-btn">
+															<button id="click-to-copy" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard"  data-clipboard-target="share-url-field" class="btn btn-default" type="button">
 																<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
 															</button>
 														</span>
