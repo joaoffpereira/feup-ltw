@@ -144,7 +144,7 @@ include 'templates/navbar.php';
 			$('#share-button-facebook').click(function(e) {
 				e.preventDefault();
 
-				var imgPath = "<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : HOME_URL . '/assets/img/default-poll.png' ?>";
+				var imgPath = "<?= $poll['image'] != '' ? UPLOADS_URL . "/" . $poll['image'] : HOME_URL . '/assets/img/default-poll.png' ?>";
 				alert(imgPath);
 
 				FB.ui({
