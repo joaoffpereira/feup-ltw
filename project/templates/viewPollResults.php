@@ -36,7 +36,7 @@ include 'templates/navbar.php';
 											<?php foreach($currentQuestion['options'] as $currentOption): ?>
 												<div class="radio">
 													<label>
-														<?php if(($answered && $selectedOpt[$i]) === $currentOption['idOption']) {?>
+														<?php if($answered && $selectedOpt[$i] === $currentOption['idOption']) {?>
 														<input type="radio" checked name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
 														<?=$currentOption['option'] ?>
 														<?php }
