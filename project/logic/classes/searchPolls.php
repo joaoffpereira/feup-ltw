@@ -7,7 +7,8 @@
 		$stmt = $dbh->prepare(
 			'SELECT * FROM Poll
 			WHERE title like ? 
-			AND isPrivate = 0');
+			AND isPrivate = 0
+			ORDER BY idPoll DESC');
 		$stmt->execute(array(
 			"%".$searchName."%"));
 	

@@ -1,5 +1,4 @@
 <?php 
-$previousPage = urldecode($_GET['previous']);
 include 'templates/navbar.php';
 ?>
 <link href="assets/css/dashboard.css" rel="stylesheet">
@@ -9,7 +8,7 @@ include 'templates/navbar.php';
 		<div class="row">
 			<div class="col-sm-12 col-md-12 main">
 				<div class="my-polls-header page-header row">
-					<h1 class="my-polls-header-title pull-left" id="modalPreviousPage" value=<?= $previousPage; ?>> <?= $previousPage; ?></h1>
+					<h1 class="my-polls-header-title pull-left" id="modalPreviousPage" value=<?=$previousPage; ?>> <?=$previousPage; ?></h1>
 				</div>
 
 				<div class="modal fade" id="viewPollModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -56,7 +55,7 @@ include 'templates/navbar.php';
 											<div class="form-group-sm">
 												<?php foreach($currentQuestion['options'] as $currentOption): ?>
 													<div class="radio">
-														<label><input type="radio" name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
+														<label><input type="radio" name=<?="".$i ?> value=<?="".$currentQuestion['idQuestion']."-".$currentOption['idOption'] ?>>
 															<p><?= $currentOption['option'] ?></p>
 														</label>
 													</div>
@@ -68,7 +67,7 @@ include 'templates/navbar.php';
 									<div class="modal-footer">
 										<div class="row">
 											<div id="poll-results-and-share-url" class="container-fluid row">
-												<a class="col-sm-12 col-md-3" href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode(urldecode($_GET['previous'])) ?>>
+												<a class="col-sm-12 col-md-3" href=<?="index.php?page=viewPollResults&id=".$idPoll."&previous=".urlencode($previousPage) ?>>
 													<input type="button" id="seeResultsBtn" class="btn btn-default" value="See poll results">
 												</a>
 												<div class="col-sm-12 col-md-9">

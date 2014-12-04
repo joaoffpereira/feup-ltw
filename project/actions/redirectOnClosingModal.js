@@ -9,9 +9,8 @@ $('#viewPollModal').on('hide.bs.modal', function () {
 });
 
 function redirect(idPoll) {
-	if(document.getElementById('modalPreviousPage').innerHTML == " Feed")
-		newLocation = "feed";
-	else newLocation = "myPolls";
+	var previous = escape(document.getElementById('modalPreviousPage').innerHTML);
 
-	window.location = 'index.php?page=viewPoll&id='.concat(idPoll).concat("&previous=").concat(newLocation);
+	window.location = 'index.php?page=viewPoll&id='.concat(idPoll).concat("&previous=")
+	.concat(previous).concat("&back=true");
 }

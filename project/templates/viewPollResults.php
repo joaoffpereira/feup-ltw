@@ -1,5 +1,4 @@
 <?php 
-$previousPage = urldecode($_GET['previous']);
 include 'templates/navbar.php';
 ?>
 <link href="assets/css/dashboard.css" rel="stylesheet">
