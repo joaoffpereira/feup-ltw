@@ -192,11 +192,14 @@ body {
 	margin-bottom: 20px;
 }
 .profile-pic img {
-	border-radius: 50%;
+	border-radius: 50px;
 	margin-bottom: 5%;
 }
 .profile-pic img:hover {
 	box-shadow: 0 0 1em gray;
+}
+.userLastLoginAndRegister h5 {
+	margin: 0 0 15px 0;
 }
 .edit-profile-btn {
 	margin-bottom: 5%;

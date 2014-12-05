@@ -9,16 +9,17 @@
 			<div class="col-sm-12 col-md-12 main">
 				<h1 class="page-header">Profile</h1>
 
-				<h1 class="profile-greeting">Welcome, <?= $_SESSION['username'] ?>.</h1>
+				<h1 class="profile-greeting text-center">Welcome, <?= $_SESSION['username'] ?>.</h1>
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-2 profile-pic">
+					<div class="col-xs-12 col-sm-offset-3 col-sm-3 profile-pic">
 						<img id="currentImage" src="<?= isset($_SESSION['image']) ? UPLOADS_URL . "/" . $_SESSION['image'] : 'assets/img/blank-profile.png' ?>" class="img-responsive" alt="Blank profile picture"  data-toggle="modal" data-target="#uploadImageModal">
 						<?php include 'uploadImageModal.php'; ?>
 					</div>
 
-					<div class="col-xs-12 col-sm-2">
-						<div class="edit-profile-btn text-center">
+					<div class="col-xs-12 col-sm-3">
+
+						<div class="edit-profile-btn">
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editUsernameModal">
 								<span class="glyphicon glyphicon-edit"></span> Edit username
@@ -52,7 +53,7 @@
 							</div>
 						</div>
 
-						<div class="edit-profile-btn text-center">
+						<div class="edit-profile-btn">
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editPasswordModal">
 								<span class="glyphicon glyphicon-edit"></span> Edit password
@@ -88,15 +89,13 @@
 								</div>
 							</div>
 						</div>
+						<!--last login date and register date -->
+						<div class="userLastLoginAndRegister">
+							<h5><b>Last login:</b> <?=$_SESSION['lastLoginDate'];?></h5>
+							<h5><b>Register date:</b> <?=$_SESSION['registerDate'];?></h5>
+						</div>
 					</div>
 				</div>
-
-				<!--last login date and register date -->
-				<div class="userLastLoginAndRegister">
-					<h5> Last login: <?=$_SESSION['lastLoginDate'];?></h5>
-					<h5> Registed in: <?=$_SESSION['registerDate'];?></h5>
-				</div>
 			</div>
-
 		</div>
 	</div>
