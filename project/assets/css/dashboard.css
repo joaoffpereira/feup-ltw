@@ -238,3 +238,14 @@ body {
 #seeResultsBtn {
 	float: left;
 }
+#opt-label {
+	width: 100%;
+}
+#opt-progress-bar {
+	text-align: left;
+	padding-left: 10px;
+	color: black;
+}
+#percentageLabel {
+	position: absolute;
+}
