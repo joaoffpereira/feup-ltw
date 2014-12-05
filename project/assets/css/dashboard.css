@@ -198,14 +198,15 @@ body {
 #seeResultsBtn {
 	float: left;
 }
+
 #opt-label {
 	width: 100%;
 }
 #opt-progress-bar {
 	text-align: left;
-	padding-left: 10px;
 	color: black;
 }
 #percentageLabel {
+	padding: 0 0 0 10px;
 	position: absolute;
 }

@@ -35,4 +35,3 @@ $('#inputPasswordConfirmation').keyup(function(e) {
 	else
 		$( "#inputPasswordConfirmDiv" ).attr("class","form-group has-error" );
 });
-
