@@ -94,15 +94,15 @@ include 'templates/navbar.php';
 
 											<div id="share-buttons" class="col-xs-12 col-sm-3">
 												<a href="<?=$pollURL?>" target="_blank">
-													<img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" id="share-button-facebook"/>
+													<img src="assets/img/facebook.png" alt="Facebook" id="share-button-facebook"/>
 												</a>
 
 												<a href="https://plus.google.com/share?url=<?=$googlePlusTwitterPollURL?>" target="_blank" id="share-button-googleplus">
-													<img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google"/>
+													<img src="assets/img/google.png" alt="Google"/>
 												</a>
 
 												<a href="http://twitter.com/intent/tweet?url=<?=$googlePlusTwitterPollURL?>&text=<?=$poll['title']?>&hashtags=pollhub" target="_blank">
-													<img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+													<img src="assets/img/twitter.png" alt="Twitter" />
 												</a>
 											</div>
 
