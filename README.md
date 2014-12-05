@@ -23,5 +23,5 @@ www.fe.up.pt/~ei12079/pollhub
 - [x] Poll owners should be able to decide if the poll is public or private;
 - [x] Private polls should not appear in listings or searches. Only the poll URL should needed to access it;
 - [x] Polls with more than one question;
-- [ ] Poll results with graphs or charts;
-- [ ] Possibility to share a poll using email or a social network.
+- [x] Poll results with graphs or charts;
+- [x] Possibility to share a poll using email or a social network.
