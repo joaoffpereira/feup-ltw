@@ -32,5 +32,7 @@ $('#inputPasswordConfirmation').keyup(function(e) {
 
 	if(confirmPass === newPass)
 		$( "#inputPasswordConfirmDiv" ).attr("class","form-group has-success" );
+	else
+		$( "#inputPasswordConfirmDiv" ).attr("class","form-group has-error" );
 });
 

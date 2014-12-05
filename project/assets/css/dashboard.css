@@ -195,62 +195,6 @@ body {
 	display: inline;
 }
 
-/*
-* profile page
-*/
-.profile-greeting {
-	margin-bottom: 20px;
-}
-.profile-pic img {
-	border-radius: 50px;
-	margin-bottom: 5%;
-}
-.profile-pic img:hover {
-	box-shadow: 0 0 1em gray;
-}
-.userLastLoginAndRegister {
-	padding-top: 15px;
-}
-.userLastLoginAndRegister h5 {
-	margin: 0 0 15px 0;
-}
-.edit-profile-btn {
-	margin-bottom: 5%;
-}
-
-.fileinput-button {
-	position: relative;
-	overflow: hidden;
-}
-.fileinput-button input {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	opacity: 0;
-	-ms-filter: 'alpha(opacity=0)';
-	font-size: 200px;
-	direction: ltr;
-	cursor: pointer;
-}
-/* Fixes for IE < 8 */
-@media screen\9 {
-	.fileinput-button input {
-		filter: alpha(opacity=0);
-		font-size: 100%;
-		height: 100%;
-	}
-}
-#fileinput-button-subtitle {
-	margin: 0;
-	padding: 5px 0 0 5px;
-}
-.files {
-	margin-top: 7px;
-}
-.files p {
-	margin: 0;
-}
 #seeResultsBtn {
 	float: left;
 }

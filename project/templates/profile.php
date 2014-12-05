@@ -1,5 +1,5 @@
 	<!-- Custom styles for this template -->
-	<link href="assets/css/dashboard.css" rel="stylesheet">
+	<link href="assets/css/profile.css" rel="stylesheet">
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
@@ -71,10 +71,10 @@
 
 										<form class="form-edit-password" role="form" action="actions.php?action=editPassword" method="POST">
 											<div class="modal-body">
-												<div id="inputPasswordDiv" class="form-group has-error">
+												<div id="inputPasswordDiv" class="form-group">
 													<input type="password" name="newPassword" id="inputPassword" class="form-control" placeholder="New password" required autofocus>
 												</div>
-												<div id="inputPasswordConfirmDiv" class="form-group has-error">
+												<div id="inputPasswordConfirmDiv" class="form-group">
 													<input type="password" id="inputPasswordConfirmation" class="form-control" name="newPasswordConfirmation" placeholder="Confirm new password" required>
 												</div>
 											</div>
