@@ -15,7 +15,7 @@
 			<label for="inputUsername" class="sr-only">Username</label>
 			<input type="username" name="inputUsername" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
 
-			<div id="inputPasswordDiv" class="form-group has-error">
+			<div id="inputPasswordDiv" class="form-group">
 				<label for="inputPassword" class="sr-only" >Password</label>
 				<input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
 			</div>
