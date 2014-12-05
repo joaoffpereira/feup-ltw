@@ -22,14 +22,3 @@ $('#inputPassword').keyup(function(e) {
 		}
 	});
 });
-
-$('#inputPasswordConfirmation').keyup(function(e) {
-	e.preventDefault();
-
-	var confirmPass = this.value;
-	var newPass = document.getElementById('inputPassword').value;
-
-	if(confirmPass === newPass)
-		$( "#inputPasswordConfirmDiv" ).attr("class","form-group has-success" );
-});
-

@@ -20,7 +20,6 @@
 				<input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
 			</div>
 
-  			<!--<input type="text" class="form-control" id="inputSuccess1">-->
 			<input type="hidden" id="gender" name="inputGender" value="">
 			<div class="btn-group btn-input clearfix form-dropdown">
 				<button id="genderButton" type="button" class="btn btn-default dropdown-toggle form-control" data-toggle="dropdown">

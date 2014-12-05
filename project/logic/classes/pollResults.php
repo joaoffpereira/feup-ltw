@@ -33,10 +33,8 @@ try {
 			$stmt->execute(array($opt['idOption']));
 			$counterOpt = $stmt->fetch()['counterResult'];
 			$opt['counterResult'] = ($counterOpt > 0) ? $counterOpt : '0';
-/*			var_dump($opt['counterResult']);*/
 
 			$opt['percentage'] = (intval($counterOpt) / intval($maxC)) * 100;
-			var_dump($opt['percentage']);
 
 			if($answered) {
 				$counterx++;

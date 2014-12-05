@@ -71,11 +71,11 @@
 
 										<form class="form-edit-password" role="form" action="actions.php?action=editPassword" method="POST">
 											<div class="modal-body">
-												<div class="form-group">
-													<input type="password" class="form-control" name="newPassword" placeholder="New password" required autofocus>
+												<div id="inputPasswordDiv" class="form-group has-error">
+													<input type="password" name="newPassword" id="inputPassword" class="form-control" placeholder="New password" required autofocus>
 												</div>
-												<div class="form-group">
-													<input type="password" class="form-control" name="newPasswordConfirmation" placeholder="Confirm new password" required>
+												<div id="inputPasswordConfirmDiv" class="form-group has-error">
+													<input type="password" id="inputPasswordConfirmation" class="form-control" name="newPasswordConfirmation" placeholder="Confirm new password" required>
 												</div>
 											</div>
 
