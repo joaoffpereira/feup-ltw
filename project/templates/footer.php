@@ -12,8 +12,9 @@
 	<script type="text/javascript" src="assets/js/jquery.iframe-transport.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.fileupload.js"></script>
 	<script type="text/javascript" src="assets/js/ZeroClipboard.js"></script>
-	<script type="text/javascript" src="assets/js/src/copyToClipboard.js"></script>
 
+	<script type="text/javascript" src="actions/checkPasswordStrength.js"></script>
+	<script type="text/javascript" src="actions/copyToClipboard.js"></script>
 	<script type="text/javascript" src="actions/formDropdownButton.js"></script>
 	<script type="text/javascript" src="actions/multipleQuestions.js"></script>
 	<script type="text/javascript" src="actions/fileUpload.js"></script>
