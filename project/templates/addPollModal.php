@@ -52,7 +52,9 @@
 					</div>
 
 					<div>
-						<button id="new_question" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add question</button>
+						<button id="new_question" class="btn btn-primary">
+							<span class="glyphicon glyphicon-plus"></span> Add question
+						</button>
 					</div>
 				</div>
 
