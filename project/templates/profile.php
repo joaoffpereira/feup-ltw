@@ -17,8 +17,7 @@
 						<?php include 'uploadImageModal.php'; ?>
 					</div>
 
-					<div class="col-xs-12 col-sm-3">
-
+					<div class="col-xs-12 col-sm-5">
 						<div class="edit-profile-btn">
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editUsernameModal">
@@ -89,6 +88,7 @@
 								</div>
 							</div>
 						</div>
+						
 						<!--last login date and register date -->
 						<div class="userLastLoginAndRegister">
 							<h5><b>Last login:</b> <?=$_SESSION['lastLoginDate'];?></h5>

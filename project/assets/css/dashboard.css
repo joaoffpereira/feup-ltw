@@ -110,12 +110,22 @@ body {
 #viewPollModalPrivacy label {
 	margin-bottom: 0;
 }
+
 #share-url-div {
 	margin-bottom: 15px;
 }
 #share-url-field {
 	cursor: auto;
 }
+
+#share-buttons {
+	text-align: center;
+	margin-bottom: 15px;
+}
+#share-buttons a {
+	text-decoration: none;
+}
+
 #show-poll-results-button {
 	margin-bottom: 15px;
 }
@@ -197,6 +207,9 @@ body {
 }
 .profile-pic img:hover {
 	box-shadow: 0 0 1em gray;
+}
+.userLastLoginAndRegister {
+	padding-top: 15px;
 }
 .userLastLoginAndRegister h5 {
 	margin: 0 0 15px 0;
