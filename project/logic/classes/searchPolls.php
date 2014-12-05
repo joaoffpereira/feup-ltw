@@ -6,13 +6,13 @@ try {
 
 	$stmt = $dbh->prepare(
 		'SELECT * FROM Poll
-		WHERE (title like ? 
+		WHERE (lower(title) like ? 
 			OR idUser = (SELECT idUser
 						FROM User
-						WHERE username like ?))
+						WHERE lower(username) like ?))
 		AND isPrivate = 0
 		ORDER BY idPoll DESC');
-	$stmt->execute(array("%" . $searchName . "%","%" . $searchName . "%"));
+	$stmt->execute(array("%" . strtolower($searchName) . "%","%" . strtolower($searchName) . "%"));
 	
 	$polls = $stmt->fetchAll();
 
