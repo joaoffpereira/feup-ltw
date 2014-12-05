@@ -15,8 +15,12 @@ All the minimum requirements and suggested extra requirements were implemented.
 Furthermore, the project also features the following:
 - Responsive design with use of Bootstrap;
 - Widget to copy to clipboard a poll url for sharing purposes;
-- Drag and drop image to upload.
+- Drag and drop image to upload;
+- Password strength color indicator on **sign up** and **edit user password** forms;
 
-#Default login
+#Default logins
+**Username:** admin  
+**Password:** admin
+
 **Username:** guest  
 **Password:** 1234
