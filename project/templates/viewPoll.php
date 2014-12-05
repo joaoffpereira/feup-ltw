@@ -79,7 +79,7 @@ include 'templates/navbar.php';
 													$googlePlusTwitterPollURL = urlencode($pollURL);
 													?>
 
-													<input id="share-url-field" type="text" class="form-control" value=<?=$pollURL?> readonly>
+													<input id="share-url-field" type="text" class="form-control" value=<?=$pollURL?> onClick="this.setSelectionRange(0, this.value.length)" readonly>
 												</div>
 											</div>
 
