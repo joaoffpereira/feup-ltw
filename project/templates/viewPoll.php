@@ -46,11 +46,11 @@ include 'templates/navbar.php';
 								<div class="content-fluid">
 									<div class="modal-body">
 										<?php
-										$i=0;
+										$i=0; $questionsFacebook;
 										foreach($poll['questions'] as &$currentQuestion): ?>
 										<div id="poll-question" align="left">
 											<div class="form-group-lg">
-												<label><?=$currentQuestion['question'] ?></label>
+												<label><?=$currentQuestion['question']; $questionsFacebook .= $currentQuestion['question'] . "\n";?></label>
 											</div>
 											<div class="form-group-sm">
 												<?php foreach($currentQuestion['options'] as $currentOption): ?>

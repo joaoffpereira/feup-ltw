@@ -39,9 +39,9 @@ include 'templates/navbar.php';
 														<?php if($answered && $selectedOpt[$i] === $currentOption['idOption']) {?> <!-- selected -->
 														<input type="radio" checked name=<?="".$i ?> value=<?="".$currentOption['idOption'] ?>>
 														<div class="progress">
-															<div id="opt-progress-bar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+															<div id="opt-progress-bar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" 
 																										style=<?="width:".$currentOption['percentage']."%"?>>
-															<label id="percentageLabel"><?=$currentOption['option']." - ".$currentOption['counterResult'] ?></label>
+															<label id="percentageLabel"><?=" [" . $currentOption['counterResult'] . "] " . $currentOption['option']?></label>
 															</div>
 														</div>
 														<?php }
@@ -50,7 +50,7 @@ include 'templates/navbar.php';
 														<div class="progress">
 															<div id="opt-progress-bar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
 																										style=<?="width:".$currentOption['percentage']."%"?>>
-															<label id="percentageLabel"><?=$currentOption['option']." - ".$currentOption['counterResult'] ?></label>
+															<label id="percentageLabel"><?=" [" . $currentOption['counterResult'] . "] " . $currentOption['option']?></label>
 															</div>
 														</div>
 														<?php } ?>
