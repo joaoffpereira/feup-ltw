@@ -67,32 +67,29 @@ include 'templates/navbar.php';
 									<div class="modal-footer">
 										<div class="row">
 											<div id="share-url-div" class="col-xs-12 col-sm-9">
+												<?php
+												$pollURL = dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll;
+												$googlePlusTwitterPollURL = urlencode($pollURL);
+
+												$iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+												$iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+												$iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+												$Android= stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+												$webOS= stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+
+												if ($iPod || $iPhone || $iPad || $Android || $webOS) { ?>
+												<input id="share-url-field" type="text" class="form-control" value=<?=$pollURL?> onClick="this.setSelectionRange(0, this.value.length)" readonly>
+												<?php } else { ?>
 												<div class="input-group">
 													<span id="tooltip_span" data-placement="bottom" title="Copied" class="input-group-btn">
-														<?php
-															$iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
-															$iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-															$iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
-															$Android= stripos($_SERVER['HTTP_USER_AGENT'],"Android");
-															$webOS= stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
-
-															//do something with this information
-															if( $iPod || $iPhone || $iPad || $Android || $webOS) {
-															        //were an iPhone/iPod touch -- do something here
-															} else { ?>
-																<button id="click-to-copy" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard"  data-clipboard-target="share-url-field" class="btn btn-default" type="button">
-																	<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-																</button>
-															<?php }?>
+														<button id="click-to-copy" data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard"  data-clipboard-target="share-url-field" class="btn btn-default" type="button">
+															<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+														</button>
 													</span>
-													
-													<?php
-													$pollURL = dirname("http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) . "/index.php?page=viewPoll&id=" . $idPoll;
-													$googlePlusTwitterPollURL = urlencode($pollURL);
-													?>
 
 													<input id="share-url-field" type="text" class="form-control" value=<?=$pollURL?> onClick="this.setSelectionRange(0, this.value.length)" readonly>
 												</div>
+												<?php }?>
 											</div>
 
 											<div id="share-buttons" class="col-xs-12 col-sm-3">
