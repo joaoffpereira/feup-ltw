@@ -50,7 +50,7 @@ include 'templates/navbar.php';
 										foreach($poll['questions'] as &$currentQuestion): ?>
 										<div id="poll-question" align="left">
 											<div class="form-group-lg">
-												<label><?=$currentQuestion['question']; $questionsFacebook .= $currentQuestion['question'] . "\n";?></label>
+												<label><?=$currentQuestion['question']; $questionsFacebook .= $currentQuestion['question'] . ' ';?></label>
 											</div>
 											<div class="form-group-sm">
 												<?php foreach($currentQuestion['options'] as $currentOption): ?>
@@ -151,8 +151,8 @@ include 'templates/navbar.php';
 					name: "<?=$poll['title']?>",
 					link: "<?=$pollURL?>",
 					picture: imgPath,
-					caption: 'This is the content of the "caption" field.',
-					description: 'This is the content of the "description" field, below the caption.',
+					caption: "<?=$questionsFacebook?>",
+					description: 'PollHub - Copyright © 2014',
 					message: ''
 				});
 			});
