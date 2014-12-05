@@ -46,7 +46,7 @@ include 'templates/navbar.php';
 								<div class="content-fluid">
 									<div class="modal-body">
 										<?php
-										$i=0; $questionsFacebook;
+										$i=0; $questionsFacebook = "";
 										foreach($poll['questions'] as &$currentQuestion): ?>
 										<div id="poll-question" align="left">
 											<div class="form-group-lg">
@@ -64,6 +64,7 @@ include 'templates/navbar.php';
 										</div>
 										<?php $i++; endforeach; ?>
 									</div>
+
 									<div class="modal-footer">
 										<div class="row">
 											<div id="share-url-div" class="col-xs-12 col-sm-9">
