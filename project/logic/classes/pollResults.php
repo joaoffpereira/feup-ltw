@@ -8,10 +8,9 @@ try {
 	$counterx = 0;
 	foreach ($poll['questions'] as &$qt) {
 		$stmt = $dbh->prepare(
-			'SELECT MAX(counters) as maxC FROM (
-				SELECT COUNT(*) as counters
-				FROM UserOption 
-				WHERE idQuestion = ?)');
+			'SELECT COUNT(*) as maxC
+			FROM UserOption 
+			WHERE idQuestion = ?');
 		$stmt->execute(array($qt['idQuestion']));
 
 		$maxC = $stmt->fetch()['maxC'];
@@ -34,7 +33,9 @@ try {
 			$counterOpt = $stmt->fetch()['counterResult'];
 			$opt['counterResult'] = ($counterOpt > 0) ? $counterOpt : '0';
 
-			$opt['percentage'] = (intval($counterOpt) / intval($maxC)) * 100;
+			if(intval($maxC) > 0)
+				$opt['percentage'] = (intval($counterOpt) / intval($maxC)) * 100;
+			else $opt['percentage'] = 0;
 
 			if($answered) {
 				$counterx++;
