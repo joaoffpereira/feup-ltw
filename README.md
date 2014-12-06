@@ -16,8 +16,8 @@ www.fe.up.pt/~ei12079/pollhub
 - [x] One user should not be able to answer twice to the same poll;
 - [x] Poll owners and users that already answered a poll, should be able to see the poll results;
 - [x] The following technologies should all be used: HTML, CSS, PHP, Javascript (by means of jQuery), Ajax/JSON, PDO/SQL (using sqlite);
-- [ ] The web site should be as secure as possible;
-- [ ] Code should be organized and consistent.
+- [x] The web site should be as secure as possible;
+- [x] Code should be organized and consistent.
 
 ##Suggested extra requirements:
 - [x] Poll owners should be able to decide if the poll is public or private;

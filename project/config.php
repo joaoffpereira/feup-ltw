@@ -20,5 +20,4 @@ defined("DB_PATH")
 or define("DB_PATH", realpath(dirname(__FILE__) . '/data'));
 
 date_default_timezone_set("Europe/Lisbon");
-
 ?>
