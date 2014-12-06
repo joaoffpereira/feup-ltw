@@ -14,7 +14,6 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-offset-3 col-sm-3 profile-pic">
 						<img id="currentImage" src="<?= isset($otherUser['image']) ? UPLOADS_URL . "/" . $otherUser['image'] : 'assets/img/blank-profile.png' ?>" class="img-responsive" alt="Blank profile picture"  data-toggle="modal" data-target="#uploadImageModal">
-						<?php include 'uploadImageModal.php'; ?>
 					</div>
 					<div class="col-xs-12 col-sm-5">
 						<!--last login date and register date -->
