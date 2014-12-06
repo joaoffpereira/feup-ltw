@@ -16,7 +16,8 @@ Furthermore, the project also features the following:
 - Responsive design with use of Bootstrap;
 - Widget to copy to clipboard a poll url for sharing purposes;
 - Drag and drop image to upload;
-- Password strength color indicator on **sign up** and **edit user password** forms;
+- Users can search polls by poll title or author (search is not case sensitive and supports substrings);
+- Password strength color indicator on **sign up** and **edit user password** forms.
 
 #Default logins
 **Username:** admin  
