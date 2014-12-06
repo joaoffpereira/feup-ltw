@@ -1,7 +1,7 @@
 FEUP-LTW
 =========
 
-[PollHub](www.fe.up.pt/~ei12079/pollhub) is a web application where users can create, share, and manage polls.
+[PollHub](http://www.fe.up.pt/~ei12079/pollhub) is a web application where users can create, share, and manage polls.
 
 #Group members
 - André Pires, ei12058
@@ -25,5 +25,5 @@ Furthermore, the project also features the following:
 **Password:** 1234
 
 #Project notes
-In order to be able to share polls on the supported social networks, a user must be using [paginas.fe.up.pt](paginas.fe.up.pt) and not [gnomo.fe.up.pt](gnomo.fe.up.pt), else, say Facebook, will not authorize the share post.
-Just follow [this link](www.fe.up.pt/~ei12079/pollhub) and everything should work just fine.
+In order to be able to share polls on the supported social networks, a user must be using [paginas.fe.up.pt](http://paginas.fe.up.pt) and not [gnomo.fe.up.pt](http://gnomo.fe.up.pt), else, say Facebook, will not authorize the share post.
+Just follow [this link](http://www.fe.up.pt/~ei12079/pollhub) and everything should work just fine.
