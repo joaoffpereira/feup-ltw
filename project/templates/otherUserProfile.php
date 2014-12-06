@@ -1,7 +1,6 @@
 	<!-- Custom styles for this template -->
 	<link href="assets/css/profile.css" rel="stylesheet">
 	<link href="assets/css/dashboard.css" rel="stylesheet">
-	
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
@@ -24,8 +23,9 @@
 					</div>
 				</div>
 
-				<div>
-					<h3 class="userPolls"> <?=$otherUser['username'] . "'s polls"?></h3>
+				<div id="otherUserPolls">
+					<h2 class="page-header"><?=$otherUser['username'] . "'s polls"?></h2>
+
 					<div class="row placeholders">
 						<?php foreach ($otherUser['polls'] as $currentPoll) { ?>
 						<div class="col-xs-12 col-sm-3 placeholder">
