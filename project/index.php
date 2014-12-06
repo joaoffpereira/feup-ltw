@@ -70,6 +70,17 @@ switch ($currentPage) {
 	case 'search':
 	include 'templates/searchResults.php';
 	break;
+
+	case 'otherUserProfile':
+	$idUser = $_GET['id'];
+
+	if($idUser === $_SESSION['idUser'])
+		include 'templates/profile.php';
+	else {
+		include 'logic/classes/getUser.php';
+		include 'templates/otherUserProfile.php';
+	}
+	break;
 	
 	default:
 	include 'templates/signIn.php';

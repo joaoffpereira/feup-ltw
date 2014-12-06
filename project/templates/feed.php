@@ -20,8 +20,10 @@
 						</div>
 						
 						<h4><?= $currentPoll['title']; ?></h4>
-						<span class="text-muted">
-							<?= "by ".$currentPoll['author']; ?>
+						<span class="text-muted user-profile"> by
+							<a id="user-profile" class="text-muted" href=<?="index.php?page=otherUserProfile&id=" . $currentPoll['idUser'] ?>>
+								<?=' '.$currentPoll['author'];?>
+							</a>
 						</span>
 					</div>
 					<?php } ?>

@@ -39,8 +39,10 @@
 						</div>
 						
 						<h4><?= $currentPoll['title']; ?></h4>
-						<span class="text-muted">
-							<?= "by ".$currentPoll['author']; ?>
+						<span class="text-muted user-profile"> by
+							<a id="my-profile" class="text-muted" href>
+								<?=' '.$currentPoll['author'];?>
+							</a>
 						</span>
 					</div>
 					<?php } ?>
