@@ -28,7 +28,7 @@
 
 					<div class="row placeholders">
 						<?php foreach ($otherUser['polls'] as $currentPoll) { ?>
-						<div class="col-xs-12 col-sm-3 placeholder">
+						<div class="col-xs-12 col-sm-4 col-md-3 placeholder">
 							<div class="placeholder-container">
 								<a href=<?= "index.php?page=viewPoll&id=" . $currentPoll['idPoll'] . "&previous=".urlencode($otherUser['username'] . "'s profile"); ?> id="modal-view">
 									<img class="resize-to-fit-and-center placeholder-containter-img" href=<?= "index.php?page=viewPoll&id=" . $currentPoll['idPoll'] . "&previous=Feed"; ?> id="modal-view" src="<?= $currentPoll['image'] != '' ? UPLOADS_URL . "/" . $currentPoll['image'] : 'assets/img/default-poll.png' ?>" alt="Default poll image">
