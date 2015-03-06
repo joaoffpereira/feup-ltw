@@ -1,9 +1,9 @@
 FEUP-LTW
 =========
 
-A web application where users can create, share, and manage polls.
-
 [PollHub](paginas.fe.up.pt/~ei12079/pollhub)
+
+A web application where users can create, share, and manage polls.
 
 #Requirements
 ##Minimum expected requirements:
