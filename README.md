@@ -1,7 +1,7 @@
 FEUP-LTW
 =========
 
-[PollHub](paginas.fe.up.pt/~ei12079/pollhub)
+[PollHub](http://paginas.fe.up.pt/~ei12079/pollhub)
 
 A web application where users can create, share, and manage polls.
 
